@@ -1,2 +1,3 @@
 # building_blocks
-Python projects to document my learning progress and share.
+Different coding projects from my continuous learning journey.
+This repo includes Python & SQL code.
