@@ -1,8 +1,13 @@
 import pandas as pd
 import random
 
-# Load affirmations CSV
-affirmation = pd.read_csv('affirmations.csv')
+#figure out why bring in csv file did not work, checking proper directory
+#import os 
+#print(os.getcwd())
+
+#Load affirmations CSV
+affirmation = pd.read_csv('Other Python Practice/affirmations.csv')
+
 
 def main():
     print("🌟 Welcome to the Motivation App! 🌟")
@@ -32,5 +37,4 @@ def main():
             print("Please choose a valid option from the menu.")
 
 # Run the app
-if __name__ == "__main__":
-    main()
+main()
