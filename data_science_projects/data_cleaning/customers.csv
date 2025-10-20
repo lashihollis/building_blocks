@@ -1,0 +1,26 @@
+customer_id,name,email,age,country,signup_date,spend
+1,John Smith,user1@example.com,,canada,10-03-2020,$99.99
+2,Emily Clark,user2@example.com,,uk,2021-01-05,null
+3,Zoe Brooks,user3@example.com,35.0,US,2021-01-05,$99.99
+4,Alex Kim,user4@example.com,30.0,canada,03-15-2021,200
+5,Jane Doe,,35.0,CAN,"March 14, 2020",Three hundred
+6,Ryan Scott,user6@example.com,25.0,Usa,10-03-2020,$300
+7,Chris Evans,user7@example.com,,UK,2021-01-05,250
+8,Mary Lee,user8@example.com,30.0,United Kingdom,03-15-2021,500
+9,Emily Clark,user9@example.com,30.0,Ca,"March 14, 2020",Three hundred
+10,Daniel Adams,,,CAN,03-15-2021,200
+11,John Smith,user11@example.com,35.0,Ca,2021-01-05,$1000
+12,Laura Green,user12@example.com,40.0,Usa,"March 14, 2020",400.00
+13,Nina Patel,user13@example.com,30.0,canada,2021/02/10,400.00
+14,Chris Evans,user14@example.com,40.0,uk,2021/02/10,500
+15,Zoe Brooks,,40.0,United Kingdom,03-15-2021,400.00
+16,Michael Davis,user16@example.com,,UK,10-03-2020,Three hundred
+17,John Smith,user17@example.com,25.0,UK,10-03-2020,$1000
+18,John Smith,user18@example.com,,Ca,2021/02/10,Three hundred
+19,Ethan Hall,user19@example.com,30.0,UK,10-03-2020,200
+20,Ryan Scott,,,Usa,03-15-2021,$1000
+21,Lisa Wong,user21@example.com,25.0,uk,03-15-2021,$99.99
+22,Emily Clark,user22@example.com,30.0,Usa,2021-01-05,null
+23,Laura Green,user23@example.com,35.0,UK,"March 14, 2020",200
+24,Nina Patel,user24@example.com,40.0,United Kingdom,2021/02/10,null
+1,John Smith,user1@example.com,,canada,10-03-2020,$99.99
