@@ -6,7 +6,7 @@ import random
 #print(os.getcwd())
 
 #Load affirmations CSV
-affirmation = pd.read_csv('Other Python Practice/affirmations.csv')
+affirmation = pd.read_csv('python_practice/affirmation_app/affirmations.csv')
 
 
 def main():
