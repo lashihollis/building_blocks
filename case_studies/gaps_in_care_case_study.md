@@ -164,4 +164,4 @@ To address these constraints:
 
 ## Summary
 
-This initiative transformed gaps-in-care data into a trusted, scalable platform that supported quality reporting, care team workflows, and external integrations. It demonstrates technical product ownership, cross-functional leadership, and outcome-driven decision-making — key competencies for a Technical Product Management role.
+This initiative transformed gaps-in-care data into a trusted, scalable platform that supported quality reporting, care team workflows, and external integrations. It demonstrates product ownership, cross-functional leadership, and outcome-driven decision-making — key competencies for a Product Management role.
