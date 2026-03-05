@@ -1,1 +1,0 @@
-website to reference dbt: https://docs.getdbt.com/guides/duckdb?step=3

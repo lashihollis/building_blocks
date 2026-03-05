@@ -12,6 +12,7 @@ def contains(terms, content):
 
 def response(text):
     text = text.lower()
+    
     if contains(['hello', 'hi', 'hey'], text):
         return "Hello!"
     elif contains(['time'], text):
@@ -21,8 +22,10 @@ def response(text):
         return "You matter, so go be great!"
     elif contains(['thanks', 'thank'], text):
         return "You're welcome!"
+    elif contains(['bye', 'exit', 'quit'], text):
+        return "Have a great day! Goodbye!👋"
     else:
-        return ("Have a great day! Goodbye!👋")
+        return ("Try asking for the time, some encouraging words, or just say hello! 😊")
 
 
 # Simple chat loop
@@ -31,5 +34,4 @@ while True:
     print(f'Bot: {response(user_input)}')
     
     if user_input.lower() in ['bye', 'exit', 'quit']:
-        print("Bot: Goodbye! 👋")
         break
