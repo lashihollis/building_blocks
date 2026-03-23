@@ -1,0 +1,24 @@
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select vital_unit
+from "analytics_engineering_project"."main"."stg_patient_reported__vitals"
+where vital_unit is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
