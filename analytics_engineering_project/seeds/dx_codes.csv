@@ -1,3 +1,9 @@
 dx_code,dx_name,condition_category
 I10,Essential (primary) hypertension,hypertension
-E11.9,Type 2 diabetes without complications,diabetes
+I11,Hypertensive heart disease,hypertension
+I12,Hypertensive chronic kidney disease,hypertension
+I15,Secondary hypertension,hypertension
+E10.9,Type 1 diabetes mellitus without complications,diabetes
+E11.9,Type 2 diabetes mellitus without complications,diabetes
+E11.65,Type 2 diabetes mellitus with hyperglycemia,diabetes
+E13.9,Other specified diabetes mellitus without complications,diabetes

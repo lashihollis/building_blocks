@@ -1,4 +1,4 @@
-source_system,priority_rank
-payer,1
-ehr,2
-patient_reported,3
+source_system,priority_rank,trust_level
+payer,1,high
+ehr,2,medium
+patient_reported,3,low
