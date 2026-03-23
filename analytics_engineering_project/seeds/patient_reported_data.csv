@@ -1,0 +1,5 @@
+patient_id,encounter_id,encounter_date,vital_type,vital_value,vital_unit,vital_date
+P1002,,2024-05-01,BP_SYSTOLIC,138,mmHg,2024-05-01
+P1002,,2024-05-01,BP_DIASTOLIC,88,mmHg,2024-05-01
+P1006,,2024-04-10,BP_SYSTOLIC,122,mmHg,2024-04-10
+P1006,,2024-04-10,BP_DIASTOLIC,79,mmHg,2024-04-10

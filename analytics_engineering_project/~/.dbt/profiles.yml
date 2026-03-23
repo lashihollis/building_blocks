@@ -1,0 +1,7 @@
+analytics_engineering_project:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: 'analytics_engineering_project.duckdb'
+      schema: main
