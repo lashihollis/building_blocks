@@ -745,3 +745,89 @@ truncate table "analytics_engineering_project"."main"."source_priority"
 [0m19:17:15.840544 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b08fbee4e60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b08fb85c440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b08f6a7d5e0>]}
 [0m19:17:15.841095 [debug] [MainThread]: Flushing usage events
 [0m19:17:15.949735 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:29:28.938626 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb0df89fb60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb0df531100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb0df89e630>]}
+
+
+============================== 19:29:28.945394 | 4a01a43c-e443-4485-a523-1f7e75a146ca ==============================
+[0m19:29:28.945394 [info ] [MainThread]: Running with dbt=1.11.2
+[0m19:29:28.946485 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'use_experimental_parser': 'False', 'cache_selected_only': 'False', 'log_path': '/workspaces/building_blocks/analytics_engineering_project/logs', 'printer_width': '80', 'quiet': 'False', 'no_print': 'None', 'indirect_selection': 'eager', 'partial_parse': 'True', 'warn_error': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'invocation_command': 'dbt seed', 'log_format': 'default', 'empty': 'None', 'target_path': 'None', 'profiles_dir': '/home/codespace/.dbt', 'log_cache_events': 'False', 'write_json': 'True', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'version_check': 'True', 'introspect': 'True'}
+[0m19:29:29.297218 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4a01a43c-e443-4485-a523-1f7e75a146ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb0deb44c20>]}
+[0m19:29:29.491286 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4a01a43c-e443-4485-a523-1f7e75a146ca', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb0dead67b0>]}
+[0m19:29:29.494062 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m19:29:29.677648 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m19:29:29.834633 [debug] [MainThread]: Partial parsing enabled: 5 files deleted, 0 files added, 8 files changed.
+[0m19:29:29.836414 [debug] [MainThread]: Partial parsing: deleted file: analytics_engineering_project://models/staging/stg_patient_reported/stg_patient_reported__encounters.sql
+[0m19:29:29.837099 [debug] [MainThread]: Partial parsing: deleted file: analytics_engineering_project://models/staging/stg_patient_reported/stg_patient_reported__diagnosis.sql
+[0m19:29:29.837807 [debug] [MainThread]: Partial parsing: updated file: analytics_engineering_project://models/staging/stg_payer/stg_payer__vitals.sql
+[0m19:29:29.838415 [debug] [MainThread]: Partial parsing: updated file: analytics_engineering_project://models/staging/stg_ehr/stg_ehr__diagnosis.sql
+[0m19:29:29.838950 [debug] [MainThread]: Partial parsing: updated file: analytics_engineering_project://models/staging/stg_ehr/stg_ehr__encounters.sql
+[0m19:29:29.839458 [debug] [MainThread]: Partial parsing: updated file: analytics_engineering_project://models/staging/stg_patient_reported/stg_patient_reported__vitals.sql
+[0m19:29:29.839975 [debug] [MainThread]: Partial parsing: updated file: analytics_engineering_project://models/intermediate/int_diagnosis/int_diagnosis__unioned.sql
+[0m19:29:29.840469 [debug] [MainThread]: Partial parsing: updated file: analytics_engineering_project://models/staging/stg_payer/stg_payer__diagnosis.sql
+[0m19:29:29.840978 [debug] [MainThread]: Partial parsing: updated file: analytics_engineering_project://models/staging/stg_ehr/stg_ehr__vitals.sql
+[0m19:29:29.841504 [debug] [MainThread]: Partial parsing: updated file: analytics_engineering_project://models/staging/stg_payer/stg_payer__encounters.sql
+[0m19:29:30.463473 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `relationships` defined on
+'stg_ehr__diagnosis' in package 'analytics_engineering_project'
+(models/staging/stg_ehr/_stg_ehr.yml). Arguments to generic tests should be
+nested under the `arguments` property.
+[0m19:29:30.464420 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '4a01a43c-e443-4485-a523-1f7e75a146ca', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb0d97e0080>]}
+[0m19:29:30.601783 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.analytics_engineering_project.int_diagnosis__unioned' (models/intermediate/int_diagnosis/int_diagnosis__unioned.sql) depends on a node named 'stg_patient__diagnosis' which was not found
+[0m19:29:30.602730 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 8 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m19:29:30.603998 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": false, "command_wall_clock_time": 1.7389177, "process_in_blocks": "8056", "process_kernel_time": 0.425745, "process_mem_max_rss": "157724", "process_out_blocks": "24", "process_user_time": 4.636218}
+[0m19:29:30.604632 [debug] [MainThread]: Command `dbt seed` failed at 19:29:30.604507 after 1.74 seconds
+[0m19:29:30.605178 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb0debacf80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb0d944d0d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7eb0d957be90>]}
+[0m19:29:30.605707 [debug] [MainThread]: Flushing usage events
+[0m19:29:30.741486 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:30:24.571537 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76c13a135460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76c139aa8770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76c13c2bde20>]}
+
+
+============================== 19:30:24.577795 | c6eae645-67b7-486a-afeb-66be540170db ==============================
+[0m19:30:24.577795 [info ] [MainThread]: Running with dbt=1.11.2
+[0m19:30:24.579209 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'profiles_dir': '/home/codespace/.dbt', 'printer_width': '80', 'use_experimental_parser': 'False', 'warn_error': 'None', 'static_parser': 'True', 'target_path': 'None', 'invocation_command': 'dbt seed', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'introspect': 'True', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_colors': 'True', 'log_path': '/workspaces/building_blocks/analytics_engineering_project/logs', 'empty': 'None', 'version_check': 'True', 'log_format': 'default', 'indirect_selection': 'eager', 'debug': 'False', 'fail_fast': 'False', 'quiet': 'False'}
+[0m19:30:24.946184 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c6eae645-67b7-486a-afeb-66be540170db', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76c139810050>]}
+[0m19:30:25.065133 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c6eae645-67b7-486a-afeb-66be540170db', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76c13a1764e0>]}
+[0m19:30:25.067831 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m19:30:25.294157 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m19:30:25.480745 [debug] [MainThread]: Partial parsing enabled: 5 files deleted, 0 files added, 8 files changed.
+[0m19:30:25.483983 [debug] [MainThread]: Partial parsing: deleted file: analytics_engineering_project://models/staging/stg_patient_reported/stg_patient_reported__encounters.sql
+[0m19:30:25.484724 [debug] [MainThread]: Partial parsing: deleted file: analytics_engineering_project://models/staging/stg_patient_reported/stg_patient_reported__diagnosis.sql
+[0m19:30:25.485516 [debug] [MainThread]: Partial parsing: updated file: analytics_engineering_project://models/staging/stg_ehr/stg_ehr__diagnosis.sql
+[0m19:30:25.486600 [debug] [MainThread]: Partial parsing: updated file: analytics_engineering_project://models/staging/stg_patient_reported/stg_patient_reported__vitals.sql
+[0m19:30:25.487719 [debug] [MainThread]: Partial parsing: updated file: analytics_engineering_project://models/staging/stg_ehr/stg_ehr__encounters.sql
+[0m19:30:25.488837 [debug] [MainThread]: Partial parsing: updated file: analytics_engineering_project://models/staging/stg_payer/stg_payer__encounters.sql
+[0m19:30:25.490000 [debug] [MainThread]: Partial parsing: updated file: analytics_engineering_project://models/staging/stg_payer/stg_payer__vitals.sql
+[0m19:30:25.491105 [debug] [MainThread]: Partial parsing: updated file: analytics_engineering_project://models/staging/stg_ehr/stg_ehr__vitals.sql
+[0m19:30:25.492092 [debug] [MainThread]: Partial parsing: updated file: analytics_engineering_project://models/staging/stg_payer/stg_payer__diagnosis.sql
+[0m19:30:25.493267 [debug] [MainThread]: Partial parsing: updated file: analytics_engineering_project://models/intermediate/int_diagnosis/int_diagnosis__unioned.sql
+[0m19:30:26.197158 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `relationships` defined on
+'stg_payer__diagnosis' in package 'analytics_engineering_project'
+(models/staging/stg_payer/_stg_payer.yml). Arguments to generic tests should be
+nested under the `arguments` property.
+[0m19:30:26.198021 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'c6eae645-67b7-486a-afeb-66be540170db', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76c1346e45c0>]}
+[0m19:30:26.337554 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.analytics_engineering_project.int_diagnosis__unioned' (models/intermediate/int_diagnosis/int_diagnosis__unioned.sql) depends on a node named 'stg_patient_reported__diagnosis' which was not found
+[0m19:30:26.338489 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 8 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m19:30:26.339717 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": false, "command_wall_clock_time": 1.8410877, "process_in_blocks": "224", "process_kernel_time": 0.399211, "process_mem_max_rss": "157628", "process_out_blocks": "16", "process_user_time": 4.58599}
+[0m19:30:26.340393 [debug] [MainThread]: Command `dbt seed` failed at 19:30:26.340273 after 1.84 seconds
+[0m19:30:26.340937 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76c139b14170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76c13555fb30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76c134651ac0>]}
+[0m19:30:26.341476 [debug] [MainThread]: Flushing usage events
+[0m19:30:26.411153 [debug] [MainThread]: An error was encountered while trying to flush usage events
