@@ -1,15 +1,16 @@
 viewing the project contents and practicing with dbt:
-
-dbt seed
-add packages.yml file to add dbt expectations
-dbt deps to install pakage
-dbt build
-dbt docs generate
-dbt docs serve (to see data lineage and documentation in browser)
------------------------------------------------------------------
+-----------------------------------------------------
+- dbt seed
+- add packages.yml file to add dbt expectations
+- dbt deps to install pakage
+- dbt build
+- dbt docs generate
+- dbt docs serve (to see data lineage and documentation in browser)
 
 to use duckdb:
+--------------
 installl homebrew (https://brew.sh/)
+
 ==> Next steps:
 - Run these commands in your terminal to add Homebrew to your PATH:
     echo >> /home/codespace/.bashrc
@@ -26,10 +27,12 @@ installl homebrew (https://brew.sh/)
     https://docs.brew.sh
 
 brew install duckdb
+
 go to your project folder ex. duckdb analytics_engineering_project.duckdb
--------------------------------------------------------------------------
+
 
 Sample queries to run:
+----------------------
 
 -- List all tables
 SHOW TABLES;
