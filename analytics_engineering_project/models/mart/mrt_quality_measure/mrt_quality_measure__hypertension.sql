@@ -4,7 +4,7 @@ with hypertension_patients as (
     from {{ ref('int_diagnosis__unioned') }} d
     inner join {{ ref('dx_codes') }} dx
         on d.dx_code = dx.dx_code
-    where dx.diagnosis = 'hypertension'
+    where dx.dx_code in ('I10', 'I11', 'I12', 'I13', 'I15') -- ICD-10 codes for hypertension
 ),
 
 bp_checks as (
@@ -21,7 +21,7 @@ select
     b.most_recent_bp_date,
     case
         --data is synthesized based on years 2023 and 2024
-        when b.most_recent_bp_date >= "2025-01-01" - interval '180 days' then 1 
+        when b.most_recent_bp_date >= '2024-07-01' then 1 
         else 0
     end as compliant
 from hypertension_patients h
