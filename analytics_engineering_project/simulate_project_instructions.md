@@ -1,4 +1,4 @@
-Viewing the project contents and practicing with dbt:
+viewing the project contents and practicing with dbt:
 
 dbt seed
 add packages.yml file to add dbt expectations
@@ -6,6 +6,7 @@ dbt deps to install pakage
 dbt build
 dbt docs generate
 dbt docs serve (to see data lineage and documentation in browser)
+-----------------------------------------------------------------
 
 to use duckdb:
 installl homebrew (https://brew.sh/)
@@ -26,6 +27,7 @@ installl homebrew (https://brew.sh/)
 
 brew install duckdb
 go to your project folder ex. duckdb analytics_engineering_project.duckdb
+-------------------------------------------------------------------------
 
 Sample queries to run:
 
