@@ -1,0 +1,125 @@
+version: 2
+
+seeds:
+  - name: dx_codes
+    description: |
+      Lookup table for ICD-10 diagnosis codes with condition categorization.
+      Used to identify patients with hypertension and other conditions for quality measures.
+    columns:
+      - name: dx_code
+        description: ICD-10 diagnosis code
+        tests:
+          - unique
+          - not_null
+      - name: dx_name
+        description: Human-readable diagnosis name
+      - name: condition_category
+        description: |
+          Categorization of diagnosis for quality measure grouping.
+          Values: 'hypertension', 'diabetes'
+        tests:
+          - accepted_values:
+              values: ['hypertension', 'diabetes']
+
+  - name: source_priority
+    description: |
+      Lookup table defining source trust ranking. Lower priority_rank = higher trust.
+      Used in ranking logic to select best available source for each measurement.
+    columns:
+      - name: source_system
+        description: Source system identifier (payer, ehr, patient_reported)
+        tests:
+          - unique
+          - not_null
+      - name: priority_rank
+        description: |
+          Priority order (1 = highest trust, higher number = lower trust)
+        tests:
+          - not_null
+          - accepted_values:
+              values: [1, 2, 3]
+      - name: trust_level
+        description: Human-readable trust level ('high', 'medium', 'low')
+        tests:
+          - accepted_values:
+              values: ['high', 'medium', 'low']
+
+  - name: payer_data
+    description: |
+      Synthetic payer source data. Highest trust source for claims-based reporting.
+      Contains encounters, diagnoses, and vitals for quality measure analysis.
+    columns:
+      - name: patient_id
+        description: Unique patient identifier
+        tests:
+          - not_null
+      - name: encounter_id
+        description: Unique encounter identifier
+        tests:
+          - not_null
+      - name: encounter_date
+        description: Date of the encounter (YYYY-MM-DD)
+        tests:
+          - not_null
+      - name: dx_code
+        description: ICD-10 diagnosis code associated with the encounter (may be null)
+      - name: vital_type
+        description: Type of vital measurement (BP_SYSTOLIC, BP_DIASTOLIC)
+      - name: vital_value
+        description: Numeric value of the vital measurement
+      - name: vital_unit
+        description: Unit of measurement (mmHg)
+      - name: vital_date
+        description: Date the vital was measured (YYYY-MM-DD)
+
+  - name: ehr_data
+    description: |
+      Synthetic EHR source data. Medium trust source containing clinical
+      encounters, diagnoses, and vitals.
+    columns:
+      - name: patient_id
+        description: Unique patient identifier
+        tests:
+          - not_null
+      - name: encounter_id
+        description: Unique encounter identifier
+        tests:
+          - not_null
+      - name: encounter_date
+        description: Date of the encounter (YYYY-MM-DD)
+        tests:
+          - not_null
+      - name: dx_code
+        description: ICD-10 diagnosis code associated with the encounter (may be null)
+      - name: vital_type
+        description: Type of vital measurement (BP_SYSTOLIC, BP_DIASTOLIC)
+      - name: vital_value
+        description: Numeric value of the vital measurement
+      - name: vital_unit
+        description: Unit of measurement (mmHg)
+      - name: vital_date
+        description: Date the vital was measured (YYYY-MM-DD)
+
+  - name: patient_reported_data
+    description: |
+      Synthetic patient-reported source data. Lowest trust source used as fallback
+      when payer and EHR data are unavailable. May have null encounter_id and encounter_date.
+    columns:
+      - name: patient_id
+        description: Unique patient identifier
+        tests:
+          - not_null
+      - name: encounter_id
+        description: Encounter identifier (may be null for patient-reported data)
+      - name: encounter_date
+        description: Date of encounter (may be null for patient-reported data)
+      - name: vital_type
+        description: Type of vital measurement (BP_SYSTOLIC, BP_DIASTOLIC)
+      - name: vital_value
+        description: Numeric value of the vital measurement
+      - name: vital_unit
+        description: Unit of measurement (mmHg)
+      - name: vital_date
+        description: Date the vital was measured (YYYY-MM-DD)
+        tests:
+          - not_null

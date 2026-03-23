@@ -1,0 +1,747 @@
+[0m18:57:23.730262 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76fb3906d5b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76fb3b8acf80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76fb3906d7c0>]}
+
+
+============================== 18:57:23.755388 | 45d4ae0b-b356-49dc-8e71-c9f5652439cc ==============================
+[0m18:57:23.755388 [info ] [MainThread]: Running with dbt=1.11.2
+[0m18:57:23.757170 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt seed', 'cache_selected_only': 'False', 'log_path': 'logs', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'introspect': 'True', 'indirect_selection': 'eager', 'no_print': 'None', 'debug': 'False', 'profiles_dir': '/home/codespace/.dbt', 'log_cache_events': 'False', 'partial_parse': 'True', 'printer_width': '80', 'fail_fast': 'False', 'version_check': 'True', 'log_format': 'default', 'static_parser': 'True', 'target_path': 'None', 'use_experimental_parser': 'False', 'warn_error': 'None', 'empty': 'None', 'use_colors': 'True'}
+[0m18:57:23.758427 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /workspaces/building_blocks/analytics_engineering_project/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m18:57:23.761466 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": false, "command_wall_clock_time": 0.17971024, "process_in_blocks": "47416", "process_kernel_time": 0.338046, "process_mem_max_rss": "117464", "process_out_blocks": "16", "process_user_time": 3.32396}
+[0m18:57:23.763937 [debug] [MainThread]: Command `dbt seed` failed at 18:57:23.763742 after 0.18 seconds
+[0m18:57:23.765374 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76fb39d2d670>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76fb3b8acf80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x76fb3958f350>]}
+[0m18:57:23.766791 [debug] [MainThread]: Flushing usage events
+[0m18:57:23.931555 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:57:40.297506 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e858d6c4e90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e858c92ee10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e858d2abc80>]}
+
+
+============================== 18:57:40.303511 | 204d2831-14e2-4e68-b196-9b23de927f3d ==============================
+[0m18:57:40.303511 [info ] [MainThread]: Running with dbt=1.11.2
+[0m18:57:40.304629 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'debug': 'False', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True', 'log_format': 'default', 'empty': 'None', 'write_json': 'True', 'log_cache_events': 'False', 'quiet': 'False', 'partial_parse': 'True', 'profiles_dir': '/home/codespace/.dbt', 'use_colors': 'True', 'log_path': '/workspaces/building_blocks/analytics_engineering_project/logs', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'printer_width': '80', 'cache_selected_only': 'False', 'invocation_command': 'dbt seed', 'static_parser': 'True', 'indirect_selection': 'eager', 'no_print': 'None'}
+[0m18:57:40.743548 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '204d2831-14e2-4e68-b196-9b23de927f3d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e858f043b60>]}
+[0m18:57:40.835619 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '204d2831-14e2-4e68-b196-9b23de927f3d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e8588c7f710>]}
+[0m18:57:40.840199 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m18:57:41.072380 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m18:57:41.073305 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m18:57:41.073955 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '204d2831-14e2-4e68-b196-9b23de927f3d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e8587b31940>]}
+[0m18:57:42.976832 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.analytics_engineering_project.stg_payer__vitals' (models/staging/stg_payer/stg_payer__vitals.sql) depends on a source named 'payer.payer_data' which was not found
+[0m18:57:42.980120 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": false, "command_wall_clock_time": 2.7485678, "process_in_blocks": "4816", "process_kernel_time": 0.41907, "process_mem_max_rss": "164480", "process_out_blocks": "24", "process_user_time": 5.026873}
+[0m18:57:42.981457 [debug] [MainThread]: Command `dbt seed` failed at 18:57:42.980850 after 2.75 seconds
+[0m18:57:42.983034 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e858d068830>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e85875356a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7e8588c5d190>]}
+[0m18:57:42.985645 [debug] [MainThread]: Flushing usage events
+[0m18:57:43.078201 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:58:09.194011 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ca29e2fa570>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ca2a0609fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ca29e4179e0>]}
+
+
+============================== 18:58:09.200261 | e2e29d3d-6578-4714-98e2-15ced3bb7dfe ==============================
+[0m18:58:09.200261 [info ] [MainThread]: Running with dbt=1.11.2
+[0m18:58:09.201354 [debug] [MainThread]: running dbt with arguments {'profiles_dir': '/home/codespace/.dbt', 'log_path': '/workspaces/building_blocks/analytics_engineering_project/logs', 'no_print': 'None', 'debug': 'False', 'write_json': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'log_cache_events': 'False', 'warn_error': 'None', 'log_format': 'default', 'version_check': 'True', 'static_parser': 'True', 'use_colors': 'True', 'invocation_command': 'dbt seed', 'empty': 'None', 'quiet': 'False', 'partial_parse': 'True', 'indirect_selection': 'eager', 'target_path': 'None', 'cache_selected_only': 'False', 'use_experimental_parser': 'False', 'printer_width': '80'}
+[0m18:58:09.602095 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e2e29d3d-6578-4714-98e2-15ced3bb7dfe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ca2997a10a0>]}
+[0m18:58:09.684232 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e2e29d3d-6578-4714-98e2-15ced3bb7dfe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ca29dc7e630>]}
+[0m18:58:09.686040 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m18:58:09.891051 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m18:58:09.891950 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m18:58:09.892556 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'e2e29d3d-6578-4714-98e2-15ced3bb7dfe', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ca298d41fa0>]}
+[0m18:58:12.019087 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.analytics_engineering_project.stg_ehr__vitals' (models/staging/stg_ehr/stg_ehr__vitals.sql) depends on a source named 'ehr.vitals' which was not found
+[0m18:58:12.020776 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": false, "command_wall_clock_time": 2.9056647, "process_in_blocks": "304", "process_kernel_time": 0.390918, "process_mem_max_rss": "166944", "process_out_blocks": "16", "process_user_time": 5.303496}
+[0m18:58:12.021677 [debug] [MainThread]: Command `dbt seed` failed at 18:58:12.021537 after 2.91 seconds
+[0m18:58:12.022493 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ca29e8478c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ca298878f20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ca298d16ae0>]}
+[0m18:58:12.023286 [debug] [MainThread]: Flushing usage events
+[0m18:58:12.110058 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:58:29.700621 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x762c6341ddf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x762c61636a20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x762c616373e0>]}
+
+
+============================== 18:58:29.712699 | ac4e6a7e-b689-4744-b4b1-eaaf8e4f9982 ==============================
+[0m18:58:29.712699 [info ] [MainThread]: Running with dbt=1.11.2
+[0m18:58:29.714217 [debug] [MainThread]: running dbt with arguments {'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True', 'log_cache_events': 'False', 'use_colors': 'True', 'log_path': '/workspaces/building_blocks/analytics_engineering_project/logs', 'debug': 'False', 'introspect': 'True', 'version_check': 'True', 'profiles_dir': '/home/codespace/.dbt', 'cache_selected_only': 'False', 'write_json': 'True', 'log_format': 'default', 'static_parser': 'True', 'indirect_selection': 'eager', 'fail_fast': 'False', 'partial_parse': 'True', 'no_print': 'None', 'quiet': 'False', 'target_path': 'None', 'invocation_command': 'dbt seed', 'printer_width': '80'}
+[0m18:58:30.114540 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ac4e6a7e-b689-4744-b4b1-eaaf8e4f9982', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x762c5c530f20>]}
+[0m18:58:30.206598 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ac4e6a7e-b689-4744-b4b1-eaaf8e4f9982', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x762c607fcb30>]}
+[0m18:58:30.209284 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m18:58:30.394073 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m18:58:30.394986 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m18:58:30.395627 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'ac4e6a7e-b689-4744-b4b1-eaaf8e4f9982', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x762c5bb15610>]}
+[0m18:58:32.502582 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.analytics_engineering_project.int_encounters__unioned' (models/intermediate/int_encounters/int_encounters__unioned.sql) depends on a node named 'stg_patient_reported__encounters' which was not found
+[0m18:58:32.504060 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": false, "command_wall_clock_time": 2.872896, "process_in_blocks": "16", "process_kernel_time": 0.384069, "process_mem_max_rss": "167016", "process_out_blocks": "16", "process_user_time": 5.53041}
+[0m18:58:32.504697 [debug] [MainThread]: Command `dbt seed` failed at 18:58:32.504576 after 2.87 seconds
+[0m18:58:32.505259 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x762c616e85c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x762c5b01f770>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x762c5af04f20>]}
+[0m18:58:32.505792 [debug] [MainThread]: Flushing usage events
+[0m18:58:32.668032 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m18:58:51.955308 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72f55efedc10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72f55f147650>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72f55ed49f40>]}
+
+
+============================== 18:58:51.961444 | 481f06ac-bee0-4a7a-9eb0-59da55d0c446 ==============================
+[0m18:58:51.961444 [info ] [MainThread]: Running with dbt=1.11.2
+[0m18:58:51.963394 [debug] [MainThread]: running dbt with arguments {'warn_error': 'None', 'indirect_selection': 'eager', 'target_path': 'None', 'introspect': 'True', 'use_experimental_parser': 'False', 'printer_width': '80', 'log_cache_events': 'False', 'partial_parse': 'True', 'no_print': 'None', 'use_colors': 'True', 'log_format': 'default', 'version_check': 'True', 'invocation_command': 'dbt seed', 'send_anonymous_usage_stats': 'True', 'log_path': '/workspaces/building_blocks/analytics_engineering_project/logs', 'empty': 'None', 'debug': 'False', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'profiles_dir': '/home/codespace/.dbt', 'static_parser': 'True', 'fail_fast': 'False', 'quiet': 'False', 'cache_selected_only': 'False'}
+[0m18:58:52.573922 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '481f06ac-bee0-4a7a-9eb0-59da55d0c446', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72f55dfdbb30>]}
+[0m18:58:52.701325 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '481f06ac-bee0-4a7a-9eb0-59da55d0c446', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72f55e161a30>]}
+[0m18:58:52.703312 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m18:58:52.948401 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m18:58:52.950115 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m18:58:52.951084 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '481f06ac-bee0-4a7a-9eb0-59da55d0c446', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72f55944cce0>]}
+[0m18:58:55.692039 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.analytics_engineering_project.int_diagnosis__unioned' (models/intermediate/int_diagnosis/int_diagnosis__unioned.sql) depends on a node named 'stg_patient__diagnosis' which was not found
+[0m18:58:55.693855 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": false, "command_wall_clock_time": 3.8504496, "process_in_blocks": "664", "process_kernel_time": 0.477681, "process_mem_max_rss": "166472", "process_out_blocks": "8", "process_user_time": 6.734375}
+[0m18:58:55.694722 [debug] [MainThread]: Command `dbt seed` failed at 18:58:55.694583 after 3.85 seconds
+[0m18:58:55.695496 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72f55efedc10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72f559476900>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72f559477cb0>]}
+[0m18:58:55.696287 [debug] [MainThread]: Flushing usage events
+[0m18:58:55.773584 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:14:57.454949 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72ecfcafeb10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72ecfcaff0e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72ecfcaffaa0>]}
+
+
+============================== 19:14:57.462703 | db95314e-70d3-40f1-b32e-c91a1bb0e358 ==============================
+[0m19:14:57.462703 [info ] [MainThread]: Running with dbt=1.11.2
+[0m19:14:57.464064 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'no_print': 'None', 'cache_selected_only': 'False', 'printer_width': '80', 'profiles_dir': '/home/codespace/.dbt', 'warn_error': 'None', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_colors': 'True', 'target_path': 'None', 'indirect_selection': 'eager', 'static_parser': 'True', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'version_check': 'True', 'log_cache_events': 'False', 'empty': 'None', 'write_json': 'True', 'log_format': 'default', 'log_path': '/workspaces/building_blocks/analytics_engineering_project/logs', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'invocation_command': 'dbt seed'}
+[0m19:14:57.860834 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'db95314e-70d3-40f1-b32e-c91a1bb0e358', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72ecfc1dd5e0>]}
+[0m19:14:57.938496 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'db95314e-70d3-40f1-b32e-c91a1bb0e358', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72ecf7fb9640>]}
+[0m19:14:57.941277 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m19:14:58.120256 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m19:14:58.121433 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m19:14:58.122179 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'db95314e-70d3-40f1-b32e-c91a1bb0e358', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72ecfeb62990>]}
+[0m19:15:00.268952 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `accepted_values` defined on 'dx_codes' in
+package 'analytics_engineering_project' (seeds/_seeds.yml). Arguments to generic
+tests should be nested under the `arguments` property.
+[0m19:15:00.269797 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'db95314e-70d3-40f1-b32e-c91a1bb0e358', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72ecf70b0080>]}
+[0m19:15:00.551584 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'mrt_vitals' in the 'models' section of file 'models/mart/mrt_vitals/_mrt_vitals.yml'
+[0m19:15:00.558458 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'mrt_quality_measure' in the 'models' section of file 'models/mart/mrt_quality_measure/_mrt_quality_measure.yml'
+[0m19:15:00.573894 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'int_encounters_unioned' in the 'models' section of file 'models/intermediate/int_encounters/_int_encounters.yml'
+[0m19:15:00.584586 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'int_vitals_unioned' in the 'models' section of file 'models/intermediate/int_vitals/_int_vitals.yml'
+[0m19:15:00.586449 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'int_vitals_ranked' in the 'models' section of file 'models/intermediate/int_vitals/_int_vitals.yml'
+[0m19:15:00.597348 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'int_diagnoses_unioned' in the 'models' section of file 'models/intermediate/int_diagnosis/_int_diagnosis.yml'
+[0m19:15:00.607128 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.analytics_engineering_project.stg_payer__vitals' (models/staging/stg_payer/stg_payer__vitals.sql) depends on a source named 'payer.payer_data' which was not found
+[0m19:15:00.608186 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 12 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m19:15:00.609922 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": false, "command_wall_clock_time": 3.2315903, "process_in_blocks": "3072", "process_kernel_time": 0.438502, "process_mem_max_rss": "159972", "process_out_blocks": "24", "process_user_time": 5.806953}
+[0m19:15:00.610783 [debug] [MainThread]: Command `dbt seed` failed at 19:15:00.610642 after 3.23 seconds
+[0m19:15:00.611456 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72ed01757aa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72ecf6965f70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72ecf76227b0>]}
+[0m19:15:00.612138 [debug] [MainThread]: Flushing usage events
+[0m19:15:00.713824 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:16:06.235374 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ca0e0a4620>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ca0e6389e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ca0e2fd880>]}
+
+
+============================== 19:16:06.241108 | 7eaf0aa9-c13c-45be-abe9-c9ba8e4fc858 ==============================
+[0m19:16:06.241108 [info ] [MainThread]: Running with dbt=1.11.2
+[0m19:16:06.242230 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'use_experimental_parser': 'False', 'invocation_command': 'dbt seed', 'profiles_dir': '/home/codespace/.dbt', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'version_check': 'True', 'log_format': 'default', 'partial_parse': 'True', 'empty': 'None', 'printer_width': '80', 'use_colors': 'True', 'static_parser': 'True', 'introspect': 'True', 'debug': 'False', 'log_path': '/workspaces/building_blocks/analytics_engineering_project/logs', 'log_cache_events': 'False', 'no_print': 'None', 'target_path': 'None', 'write_json': 'True', 'quiet': 'False', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False'}
+[0m19:16:06.585337 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7eaf0aa9-c13c-45be-abe9-c9ba8e4fc858', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ca0d932a50>]}
+[0m19:16:06.665161 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7eaf0aa9-c13c-45be-abe9-c9ba8e4fc858', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ca1023b530>]}
+[0m19:16:06.667096 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m19:16:06.842048 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m19:16:06.842940 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m19:16:06.843550 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '7eaf0aa9-c13c-45be-abe9-c9ba8e4fc858', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ca101c7dd0>]}
+[0m19:16:08.895343 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `accepted_values` defined on 'dx_codes' in
+package 'analytics_engineering_project' (seeds/_seeds.yml). Arguments to generic
+tests should be nested under the `arguments` property.
+[0m19:16:08.896175 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '7eaf0aa9-c13c-45be-abe9-c9ba8e4fc858', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ca08d2b890>]}
+[0m19:16:09.165617 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'mrt_vitals' in the 'models' section of file 'models/mart/mrt_vitals/_mrt_vitals.yml'
+[0m19:16:09.172374 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'mrt_quality_measure' in the 'models' section of file 'models/mart/mrt_quality_measure/_mrt_quality_measure.yml'
+[0m19:16:09.188501 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'int_encounters_unioned' in the 'models' section of file 'models/intermediate/int_encounters/_int_encounters.yml'
+[0m19:16:09.199810 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'int_vitals_unioned' in the 'models' section of file 'models/intermediate/int_vitals/_int_vitals.yml'
+[0m19:16:09.201794 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'int_vitals_ranked' in the 'models' section of file 'models/intermediate/int_vitals/_int_vitals.yml'
+[0m19:16:09.214296 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'int_diagnoses_unioned' in the 'models' section of file 'models/intermediate/int_diagnosis/_int_diagnosis.yml'
+[0m19:16:09.225271 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.analytics_engineering_project.stg_payer__vitals' (models/staging/stg_payer/stg_payer__vitals.sql) depends on a source named 'payer.payer_data' which was not found
+[0m19:16:09.226449 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 12 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m19:16:09.228134 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": false, "command_wall_clock_time": 3.0755534, "process_in_blocks": "416", "process_kernel_time": 0.380678, "process_mem_max_rss": "159576", "process_out_blocks": "24", "process_user_time": 5.714125}
+[0m19:16:09.229054 [debug] [MainThread]: Command `dbt seed` failed at 19:16:09.228865 after 3.08 seconds
+[0m19:16:09.229920 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ca0eb9e4b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ca085a2180>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74ca08745ca0>]}
+[0m19:16:09.230744 [debug] [MainThread]: Flushing usage events
+[0m19:16:09.387086 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:16:42.416855 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b63c92a21b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b63cb428ef0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b63ca752180>]}
+
+
+============================== 19:16:42.423369 | a739c9ae-d2a4-404a-baaf-67d25a07fed7 ==============================
+[0m19:16:42.423369 [info ] [MainThread]: Running with dbt=1.11.2
+[0m19:16:42.424717 [debug] [MainThread]: running dbt with arguments {'empty': 'None', 'invocation_command': 'dbt seed', 'cache_selected_only': 'False', 'write_json': 'True', 'printer_width': '80', 'profiles_dir': '/home/codespace/.dbt', 'no_print': 'None', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'target_path': 'None', 'debug': 'False', 'introspect': 'True', 'log_cache_events': 'False', 'log_format': 'default', 'use_colors': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'log_path': '/workspaces/building_blocks/analytics_engineering_project/logs', 'warn_error': 'None', 'version_check': 'True', 'indirect_selection': 'eager', 'quiet': 'False', 'send_anonymous_usage_stats': 'True'}
+[0m19:16:42.777918 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a739c9ae-d2a4-404a-baaf-67d25a07fed7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b63c8a16420>]}
+[0m19:16:42.856739 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a739c9ae-d2a4-404a-baaf-67d25a07fed7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b63cb428ef0>]}
+[0m19:16:42.858609 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m19:16:43.183205 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m19:16:43.186086 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m19:16:43.187394 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'a739c9ae-d2a4-404a-baaf-67d25a07fed7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b63c8984e30>]}
+[0m19:16:45.580829 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `accepted_values` defined on 'dx_codes' in
+package 'analytics_engineering_project' (seeds/_seeds.yml). Arguments to generic
+tests should be nested under the `arguments` property.
+[0m19:16:45.583814 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'a739c9ae-d2a4-404a-baaf-67d25a07fed7', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b63c36b5ee0>]}
+[0m19:16:45.941575 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'mrt_vitals' in the 'models' section of file 'models/mart/mrt_vitals/_mrt_vitals.yml'
+[0m19:16:45.949525 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'mrt_quality_measure' in the 'models' section of file 'models/mart/mrt_quality_measure/_mrt_quality_measure.yml'
+[0m19:16:45.967556 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'int_encounters_unioned' in the 'models' section of file 'models/intermediate/int_encounters/_int_encounters.yml'
+[0m19:16:45.979424 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'int_vitals_unioned' in the 'models' section of file 'models/intermediate/int_vitals/_int_vitals.yml'
+[0m19:16:45.981272 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'int_vitals_ranked' in the 'models' section of file 'models/intermediate/int_vitals/_int_vitals.yml'
+[0m19:16:45.995021 [warn ] [MainThread]: [[33mWARNING[0m]: Did not find matching node for patch with name 'int_diagnoses_unioned' in the 'models' section of file 'models/intermediate/int_diagnosis/_int_diagnosis.yml'
+[0m19:16:46.041213 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.analytics_engineering_project.not_null_mrt_vitals_patient_id.584722f7c8' (models/mart/mrt_vitals/_mrt_vitals.yml) depends on a node named 'mrt_vitals' in package '' which was not found
+[0m19:16:46.041922 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.analytics_engineering_project.not_null_mrt_vitals_vital_date.94e62fcfa2' (models/mart/mrt_vitals/_mrt_vitals.yml) depends on a node named 'mrt_vitals' in package '' which was not found
+[0m19:16:46.042776 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.analytics_engineering_project.unique_mrt_quality_measure_patient_id.e4edeb901e' (models/mart/mrt_quality_measure/_mrt_quality_measure.yml) depends on a node named 'mrt_quality_measure' in package '' which was not found
+[0m19:16:46.043612 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.analytics_engineering_project.not_null_mrt_quality_measure_patient_id.14972c27df' (models/mart/mrt_quality_measure/_mrt_quality_measure.yml) depends on a node named 'mrt_quality_measure' in package '' which was not found
+[0m19:16:46.044298 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.analytics_engineering_project.not_null_mrt_quality_measure_compliant.d707378ae9' (models/mart/mrt_quality_measure/_mrt_quality_measure.yml) depends on a node named 'mrt_quality_measure' in package '' which was not found
+[0m19:16:46.044926 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.analytics_engineering_project.accepted_values_mrt_quality_measure_compliant__0__1.88b96f0322' (models/mart/mrt_quality_measure/_mrt_quality_measure.yml) depends on a node named 'mrt_quality_measure' in package '' which was not found
+[0m19:16:46.045666 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.analytics_engineering_project.unique_int_encounters_unioned_encounter_id.2a874ed12c' (models/intermediate/int_encounters/_int_encounters.yml) depends on a node named 'int_encounters_unioned' in package '' which was not found
+[0m19:16:46.046497 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.analytics_engineering_project.not_null_int_encounters_unioned_encounter_id.5e10556e8d' (models/intermediate/int_encounters/_int_encounters.yml) depends on a node named 'int_encounters_unioned' in package '' which was not found
+[0m19:16:46.047353 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.analytics_engineering_project.not_null_int_encounters_unioned_patient_id.1bcd7ef656' (models/intermediate/int_encounters/_int_encounters.yml) depends on a node named 'int_encounters_unioned' in package '' which was not found
+[0m19:16:46.048226 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.analytics_engineering_project.not_null_int_encounters_unioned_encounter_date.1ced1da47a' (models/intermediate/int_encounters/_int_encounters.yml) depends on a node named 'int_encounters_unioned' in package '' which was not found
+[0m19:16:46.049048 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.analytics_engineering_project.not_null_int_vitals_unioned_patient_id.7de6f54a3c' (models/intermediate/int_vitals/_int_vitals.yml) depends on a node named 'int_vitals_unioned' in package '' which was not found
+[0m19:16:46.050053 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.analytics_engineering_project.not_null_int_vitals_unioned_vital_date.75fa558835' (models/intermediate/int_vitals/_int_vitals.yml) depends on a node named 'int_vitals_unioned' in package '' which was not found
+[0m19:16:46.050940 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.analytics_engineering_project.not_null_int_vitals_ranked_patient_id.b20cdf3949' (models/intermediate/int_vitals/_int_vitals.yml) depends on a node named 'int_vitals_ranked' in package '' which was not found
+[0m19:16:46.051780 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.analytics_engineering_project.not_null_int_vitals_ranked_vital_date.e3cb8b5bd8' (models/intermediate/int_vitals/_int_vitals.yml) depends on a node named 'int_vitals_ranked' in package '' which was not found
+[0m19:16:46.052563 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.analytics_engineering_project.not_null_int_diagnoses_unioned_patient_id.237ce60df7' (models/intermediate/int_diagnosis/_int_diagnosis.yml) depends on a node named 'int_diagnoses_unioned' in package '' which was not found
+[0m19:16:46.053618 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.analytics_engineering_project.not_null_int_diagnoses_unioned_encounter_id.ff3257aebc' (models/intermediate/int_diagnosis/_int_diagnosis.yml) depends on a node named 'int_diagnoses_unioned' in package '' which was not found
+[0m19:16:46.054544 [warn ] [MainThread]: [[33mWARNING[0m]: Test 'test.analytics_engineering_project.not_null_int_diagnoses_unioned_dx_code.6888159c2d' (models/intermediate/int_diagnosis/_int_diagnosis.yml) depends on a node named 'int_diagnoses_unioned' in package '' which was not found
+[0m19:16:46.224321 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a739c9ae-d2a4-404a-baaf-67d25a07fed7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b63c2f1dfd0>]}
+[0m19:16:46.352171 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/building_blocks/analytics_engineering_project/target/manifest.json
+[0m19:16:46.355979 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/building_blocks/analytics_engineering_project/target/semantic_manifest.json
+[0m19:16:46.521725 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a739c9ae-d2a4-404a-baaf-67d25a07fed7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b63c2e736b0>]}
+[0m19:16:46.523824 [info ] [MainThread]: Found 15 models, 5 seeds, 53 data tests, 3 sources, 472 macros
+[0m19:16:46.526457 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a739c9ae-d2a4-404a-baaf-67d25a07fed7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b63c366eea0>]}
+[0m19:16:46.531146 [info ] [MainThread]: 
+[0m19:16:46.532071 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m19:16:46.533008 [info ] [MainThread]: 
+[0m19:16:46.534150 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m19:16:46.540227 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_analytics_engineering_project'
+[0m19:16:46.747602 [debug] [ThreadPool]: Using duckdb connection "list_analytics_engineering_project"
+[0m19:16:46.748234 [debug] [ThreadPool]: On list_analytics_engineering_project: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "analytics_engineering_project", "target_name": "dev", "connection_name": "list_analytics_engineering_project"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"analytics_engineering_project"'
+    
+  
+  
+[0m19:16:46.748711 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:16:47.009966 [debug] [ThreadPool]: SQL status: OK in 0.261 seconds
+[0m19:16:47.012635 [debug] [ThreadPool]: On list_analytics_engineering_project: Close
+[0m19:16:47.013822 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_analytics_engineering_project, now create_analytics_engineering_project_main)
+[0m19:16:47.014747 [debug] [ThreadPool]: Creating schema "database: "analytics_engineering_project"
+schema: "main"
+"
+[0m19:16:47.028895 [debug] [ThreadPool]: Using duckdb connection "create_analytics_engineering_project_main"
+[0m19:16:47.029462 [debug] [ThreadPool]: On create_analytics_engineering_project_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "analytics_engineering_project", "target_name": "dev", "connection_name": "create_analytics_engineering_project_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='analytics_engineering_project'
+        and type='sqlite'
+    
+  
+[0m19:16:47.029942 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:16:47.031369 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m19:16:47.033549 [debug] [ThreadPool]: Using duckdb connection "create_analytics_engineering_project_main"
+[0m19:16:47.034047 [debug] [ThreadPool]: On create_analytics_engineering_project_main: BEGIN
+[0m19:16:47.034737 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m19:16:47.035226 [debug] [ThreadPool]: Using duckdb connection "create_analytics_engineering_project_main"
+[0m19:16:47.035699 [debug] [ThreadPool]: On create_analytics_engineering_project_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "analytics_engineering_project", "target_name": "dev", "connection_name": "create_analytics_engineering_project_main"} */
+
+    
+    
+        create schema if not exists "analytics_engineering_project"."main"
+    
+[0m19:16:47.036453 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m19:16:47.037435 [debug] [ThreadPool]: On create_analytics_engineering_project_main: COMMIT
+[0m19:16:47.037936 [debug] [ThreadPool]: Using duckdb connection "create_analytics_engineering_project_main"
+[0m19:16:47.038412 [debug] [ThreadPool]: On create_analytics_engineering_project_main: COMMIT
+[0m19:16:47.039185 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m19:16:47.039664 [debug] [ThreadPool]: On create_analytics_engineering_project_main: Close
+[0m19:16:47.042286 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_analytics_engineering_project_main, now list_analytics_engineering_project_main)
+[0m19:16:47.048123 [debug] [ThreadPool]: Using duckdb connection "list_analytics_engineering_project_main"
+[0m19:16:47.048623 [debug] [ThreadPool]: On list_analytics_engineering_project_main: BEGIN
+[0m19:16:47.049123 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:16:47.049925 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m19:16:47.050397 [debug] [ThreadPool]: Using duckdb connection "list_analytics_engineering_project_main"
+[0m19:16:47.050919 [debug] [ThreadPool]: On list_analytics_engineering_project_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "analytics_engineering_project", "target_name": "dev", "connection_name": "list_analytics_engineering_project_main"} */
+select
+      'analytics_engineering_project' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'analytics_engineering_project'
+  
+[0m19:16:47.149220 [debug] [ThreadPool]: SQL status: OK in 0.098 seconds
+[0m19:16:47.150845 [debug] [ThreadPool]: On list_analytics_engineering_project_main: ROLLBACK
+[0m19:16:47.191140 [debug] [ThreadPool]: Failed to rollback 'list_analytics_engineering_project_main'
+[0m19:16:47.192042 [debug] [ThreadPool]: On list_analytics_engineering_project_main: Close
+[0m19:16:47.193944 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a739c9ae-d2a4-404a-baaf-67d25a07fed7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b63c37f2f30>]}
+[0m19:16:47.194936 [debug] [MainThread]: Using duckdb connection "master"
+[0m19:16:47.195465 [debug] [MainThread]: On master: BEGIN
+[0m19:16:47.195936 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:16:47.196921 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m19:16:47.197403 [debug] [MainThread]: On master: COMMIT
+[0m19:16:47.197910 [debug] [MainThread]: Using duckdb connection "master"
+[0m19:16:47.198379 [debug] [MainThread]: On master: COMMIT
+[0m19:16:47.199077 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m19:16:47.199550 [debug] [MainThread]: On master: Close
+[0m19:16:47.203178 [debug] [Thread-1 (]: Began running node seed.analytics_engineering_project.dx_codes
+[0m19:16:47.203853 [info ] [Thread-1 (]: 1 of 5 START seed file main.dx_codes ........................................... [RUN]
+[0m19:16:47.204644 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_analytics_engineering_project_main, now seed.analytics_engineering_project.dx_codes)
+[0m19:16:47.205272 [debug] [Thread-1 (]: Began compiling node seed.analytics_engineering_project.dx_codes
+[0m19:16:47.205818 [debug] [Thread-1 (]: Began executing node seed.analytics_engineering_project.dx_codes
+[0m19:16:47.243077 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.dx_codes"
+[0m19:16:47.243688 [debug] [Thread-1 (]: On seed.analytics_engineering_project.dx_codes: BEGIN
+[0m19:16:47.244241 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:16:47.245210 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:16:47.245750 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.dx_codes"
+[0m19:16:47.246303 [debug] [Thread-1 (]: On seed.analytics_engineering_project.dx_codes: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "analytics_engineering_project", "target_name": "dev", "node_id": "seed.analytics_engineering_project.dx_codes"} */
+
+    create table "analytics_engineering_project"."main"."dx_codes" ("dx_code" text,"dx_name" text,"condition_category" text)
+  
+[0m19:16:47.248113 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:16:47.261229 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.dx_codes"
+[0m19:16:47.262150 [debug] [Thread-1 (]: On seed.analytics_engineering_project.dx_codes: 
+          COPY "analytics_engineering_project"."main"."dx_codes" FROM '/workspaces/building_blocks/analytics_engineering_project/seeds/dx_codes.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m19:16:47.272767 [debug] [Thread-1 (]: SQL status: OK in 0.010 seconds
+[0m19:16:47.279144 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.analytics_engineering_project.dx_codes"
+[0m19:16:47.293955 [debug] [Thread-1 (]: On seed.analytics_engineering_project.dx_codes: COMMIT
+[0m19:16:47.294775 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.dx_codes"
+[0m19:16:47.295603 [debug] [Thread-1 (]: On seed.analytics_engineering_project.dx_codes: COMMIT
+[0m19:16:47.299669 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m19:16:47.301734 [debug] [Thread-1 (]: On seed.analytics_engineering_project.dx_codes: Close
+[0m19:16:47.303713 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a739c9ae-d2a4-404a-baaf-67d25a07fed7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b63c2fa1580>]}
+[0m19:16:47.304456 [info ] [Thread-1 (]: 1 of 5 OK loaded seed file main.dx_codes ....................................... [[32mINSERT 8[0m in 0.10s]
+[0m19:16:47.305344 [debug] [Thread-1 (]: Finished running node seed.analytics_engineering_project.dx_codes
+[0m19:16:47.305958 [debug] [Thread-1 (]: Began running node seed.analytics_engineering_project.ehr_data
+[0m19:16:47.306755 [info ] [Thread-1 (]: 2 of 5 START seed file main.ehr_data ........................................... [RUN]
+[0m19:16:47.307641 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.analytics_engineering_project.dx_codes, now seed.analytics_engineering_project.ehr_data)
+[0m19:16:47.308377 [debug] [Thread-1 (]: Began compiling node seed.analytics_engineering_project.ehr_data
+[0m19:16:47.309119 [debug] [Thread-1 (]: Began executing node seed.analytics_engineering_project.ehr_data
+[0m19:16:47.323941 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.ehr_data"
+[0m19:16:47.324699 [debug] [Thread-1 (]: On seed.analytics_engineering_project.ehr_data: BEGIN
+[0m19:16:47.327397 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:16:47.328527 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:16:47.329347 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.ehr_data"
+[0m19:16:47.330063 [debug] [Thread-1 (]: On seed.analytics_engineering_project.ehr_data: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "analytics_engineering_project", "target_name": "dev", "node_id": "seed.analytics_engineering_project.ehr_data"} */
+
+    create table "analytics_engineering_project"."main"."ehr_data" ("patient_id" text,"encounter_id" text,"encounter_date" date,"dx_code" text,"vital_type" text,"vital_value" integer,"vital_unit" text,"vital_date" date)
+  
+[0m19:16:47.331298 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:16:47.333494 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.ehr_data"
+[0m19:16:47.334278 [debug] [Thread-1 (]: On seed.analytics_engineering_project.ehr_data: 
+          COPY "analytics_engineering_project"."main"."ehr_data" FROM '/workspaces/building_blocks/analytics_engineering_project/seeds/ehr_data.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m19:16:47.339662 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m19:16:47.341127 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.analytics_engineering_project.ehr_data"
+[0m19:16:47.352483 [debug] [Thread-1 (]: On seed.analytics_engineering_project.ehr_data: COMMIT
+[0m19:16:47.355362 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.ehr_data"
+[0m19:16:47.356210 [debug] [Thread-1 (]: On seed.analytics_engineering_project.ehr_data: COMMIT
+[0m19:16:47.358812 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m19:16:47.360354 [debug] [Thread-1 (]: On seed.analytics_engineering_project.ehr_data: Close
+[0m19:16:47.361567 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a739c9ae-d2a4-404a-baaf-67d25a07fed7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b63c190afc0>]}
+[0m19:16:47.362587 [info ] [Thread-1 (]: 2 of 5 OK loaded seed file main.ehr_data ....................................... [[32mINSERT 20[0m in 0.05s]
+[0m19:16:47.363929 [debug] [Thread-1 (]: Finished running node seed.analytics_engineering_project.ehr_data
+[0m19:16:47.364769 [debug] [Thread-1 (]: Began running node seed.analytics_engineering_project.patient_reported_data
+[0m19:16:47.368783 [info ] [Thread-1 (]: 3 of 5 START seed file main.patient_reported_data .............................. [RUN]
+[0m19:16:47.370835 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.analytics_engineering_project.ehr_data, now seed.analytics_engineering_project.patient_reported_data)
+[0m19:16:47.371986 [debug] [Thread-1 (]: Began compiling node seed.analytics_engineering_project.patient_reported_data
+[0m19:16:47.372801 [debug] [Thread-1 (]: Began executing node seed.analytics_engineering_project.patient_reported_data
+[0m19:16:47.382409 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.patient_reported_data"
+[0m19:16:47.383259 [debug] [Thread-1 (]: On seed.analytics_engineering_project.patient_reported_data: BEGIN
+[0m19:16:47.383968 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:16:47.385257 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:16:47.386115 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.patient_reported_data"
+[0m19:16:47.387019 [debug] [Thread-1 (]: On seed.analytics_engineering_project.patient_reported_data: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "analytics_engineering_project", "target_name": "dev", "node_id": "seed.analytics_engineering_project.patient_reported_data"} */
+
+    create table "analytics_engineering_project"."main"."patient_reported_data" ("patient_id" text,"encounter_id" integer,"encounter_date" date,"vital_type" text,"vital_value" integer,"vital_unit" text,"vital_date" date)
+  
+[0m19:16:47.389301 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:16:47.391711 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.patient_reported_data"
+[0m19:16:47.392613 [debug] [Thread-1 (]: On seed.analytics_engineering_project.patient_reported_data: 
+          COPY "analytics_engineering_project"."main"."patient_reported_data" FROM '/workspaces/building_blocks/analytics_engineering_project/seeds/patient_reported_data.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m19:16:47.397759 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m19:16:47.399221 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.analytics_engineering_project.patient_reported_data"
+[0m19:16:47.402894 [debug] [Thread-1 (]: On seed.analytics_engineering_project.patient_reported_data: COMMIT
+[0m19:16:47.403750 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.patient_reported_data"
+[0m19:16:47.404602 [debug] [Thread-1 (]: On seed.analytics_engineering_project.patient_reported_data: COMMIT
+[0m19:16:47.409139 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m19:16:47.410368 [debug] [Thread-1 (]: On seed.analytics_engineering_project.patient_reported_data: Close
+[0m19:16:47.411255 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a739c9ae-d2a4-404a-baaf-67d25a07fed7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b63c19091c0>]}
+[0m19:16:47.412151 [info ] [Thread-1 (]: 3 of 5 OK loaded seed file main.patient_reported_data .......................... [[32mINSERT 16[0m in 0.04s]
+[0m19:16:47.413668 [debug] [Thread-1 (]: Finished running node seed.analytics_engineering_project.patient_reported_data
+[0m19:16:47.414582 [debug] [Thread-1 (]: Began running node seed.analytics_engineering_project.payer_data
+[0m19:16:47.415489 [info ] [Thread-1 (]: 4 of 5 START seed file main.payer_data ......................................... [RUN]
+[0m19:16:47.416421 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.analytics_engineering_project.patient_reported_data, now seed.analytics_engineering_project.payer_data)
+[0m19:16:47.417294 [debug] [Thread-1 (]: Began compiling node seed.analytics_engineering_project.payer_data
+[0m19:16:47.418144 [debug] [Thread-1 (]: Began executing node seed.analytics_engineering_project.payer_data
+[0m19:16:47.434391 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.payer_data"
+[0m19:16:47.435436 [debug] [Thread-1 (]: On seed.analytics_engineering_project.payer_data: BEGIN
+[0m19:16:47.436589 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:16:47.438070 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:16:47.439164 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.payer_data"
+[0m19:16:47.440118 [debug] [Thread-1 (]: On seed.analytics_engineering_project.payer_data: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "analytics_engineering_project", "target_name": "dev", "node_id": "seed.analytics_engineering_project.payer_data"} */
+
+    create table "analytics_engineering_project"."main"."payer_data" ("patient_id" text,"encounter_id" text,"encounter_date" date,"dx_code" text,"vital_type" text,"vital_value" integer,"vital_unit" text,"vital_date" date)
+  
+[0m19:16:47.441540 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m19:16:47.444133 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.payer_data"
+[0m19:16:47.444980 [debug] [Thread-1 (]: On seed.analytics_engineering_project.payer_data: 
+          COPY "analytics_engineering_project"."main"."payer_data" FROM '/workspaces/building_blocks/analytics_engineering_project/seeds/payer_data.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m19:16:47.449972 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m19:16:47.451339 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.analytics_engineering_project.payer_data"
+[0m19:16:47.454524 [debug] [Thread-1 (]: On seed.analytics_engineering_project.payer_data: COMMIT
+[0m19:16:47.455373 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.payer_data"
+[0m19:16:47.456168 [debug] [Thread-1 (]: On seed.analytics_engineering_project.payer_data: COMMIT
+[0m19:16:47.461241 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m19:16:47.463488 [debug] [Thread-1 (]: On seed.analytics_engineering_project.payer_data: Close
+[0m19:16:47.464504 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a739c9ae-d2a4-404a-baaf-67d25a07fed7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b63c22f6d50>]}
+[0m19:16:47.465214 [info ] [Thread-1 (]: 4 of 5 OK loaded seed file main.payer_data ..................................... [[32mINSERT 24[0m in 0.05s]
+[0m19:16:47.466086 [debug] [Thread-1 (]: Finished running node seed.analytics_engineering_project.payer_data
+[0m19:16:47.466680 [debug] [Thread-1 (]: Began running node seed.analytics_engineering_project.source_priority
+[0m19:16:47.467402 [info ] [Thread-1 (]: 5 of 5 START seed file main.source_priority .................................... [RUN]
+[0m19:16:47.468098 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.analytics_engineering_project.payer_data, now seed.analytics_engineering_project.source_priority)
+[0m19:16:47.468633 [debug] [Thread-1 (]: Began compiling node seed.analytics_engineering_project.source_priority
+[0m19:16:47.469196 [debug] [Thread-1 (]: Began executing node seed.analytics_engineering_project.source_priority
+[0m19:16:47.475002 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.source_priority"
+[0m19:16:47.475564 [debug] [Thread-1 (]: On seed.analytics_engineering_project.source_priority: BEGIN
+[0m19:16:47.476112 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:16:47.476928 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:16:47.477475 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.source_priority"
+[0m19:16:47.478032 [debug] [Thread-1 (]: On seed.analytics_engineering_project.source_priority: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "analytics_engineering_project", "target_name": "dev", "node_id": "seed.analytics_engineering_project.source_priority"} */
+
+    create table "analytics_engineering_project"."main"."source_priority" ("source_system" text,"priority_rank" integer,"trust_level" text)
+  
+[0m19:16:47.478904 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m19:16:47.480298 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.source_priority"
+[0m19:16:47.480855 [debug] [Thread-1 (]: On seed.analytics_engineering_project.source_priority: 
+          COPY "analytics_engineering_project"."main"."source_priority" FROM '/workspaces/building_blocks/analytics_engineering_project/seeds/source_priority.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m19:16:47.482789 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:16:47.483771 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.analytics_engineering_project.source_priority"
+[0m19:16:47.485891 [debug] [Thread-1 (]: On seed.analytics_engineering_project.source_priority: COMMIT
+[0m19:16:47.486453 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.source_priority"
+[0m19:16:47.487046 [debug] [Thread-1 (]: On seed.analytics_engineering_project.source_priority: COMMIT
+[0m19:16:47.488941 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:16:47.489825 [debug] [Thread-1 (]: On seed.analytics_engineering_project.source_priority: Close
+[0m19:16:47.490515 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'a739c9ae-d2a4-404a-baaf-67d25a07fed7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b63c22d6510>]}
+[0m19:16:47.491213 [info ] [Thread-1 (]: 5 of 5 OK loaded seed file main.source_priority ................................ [[32mINSERT 3[0m in 0.02s]
+[0m19:16:47.492061 [debug] [Thread-1 (]: Finished running node seed.analytics_engineering_project.source_priority
+[0m19:16:47.493576 [debug] [MainThread]: Using duckdb connection "master"
+[0m19:16:47.494078 [debug] [MainThread]: On master: BEGIN
+[0m19:16:47.494510 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m19:16:47.495266 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m19:16:47.495727 [debug] [MainThread]: On master: COMMIT
+[0m19:16:47.496306 [debug] [MainThread]: Using duckdb connection "master"
+[0m19:16:47.496956 [debug] [MainThread]: On master: COMMIT
+[0m19:16:47.497850 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m19:16:47.498759 [debug] [MainThread]: On master: Close
+[0m19:16:47.499664 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:16:47.500425 [debug] [MainThread]: Connection 'seed.analytics_engineering_project.source_priority' was properly closed.
+[0m19:16:47.501191 [info ] [MainThread]: 
+[0m19:16:47.502088 [info ] [MainThread]: Finished running 5 seeds in 0 hours 0 minutes and 0.97 seconds (0.97s).
+[0m19:16:47.503924 [debug] [MainThread]: Command end result
+[0m19:16:47.560265 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/building_blocks/analytics_engineering_project/target/manifest.json
+[0m19:16:47.563011 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/building_blocks/analytics_engineering_project/target/semantic_manifest.json
+[0m19:16:47.569107 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/building_blocks/analytics_engineering_project/target/run_results.json
+[0m19:16:47.569595 [info ] [MainThread]: 
+[0m19:16:47.570237 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m19:16:47.570821 [info ] [MainThread]: 
+[0m19:16:47.571434 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+[0m19:16:47.572221 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 12 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m19:16:47.573412 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": true, "command_wall_clock_time": 5.222235, "process_in_blocks": "17480", "process_kernel_time": 0.467032, "process_mem_max_rss": "182532", "process_out_blocks": "4584", "process_user_time": 6.573846}
+[0m19:16:47.574050 [debug] [MainThread]: Command `dbt seed` succeeded at 19:16:47.573933 after 5.22 seconds
+[0m19:16:47.574571 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b63c922e180>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b63c98472c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b63c9844b30>]}
+[0m19:16:47.575149 [debug] [MainThread]: Flushing usage events
+[0m19:16:47.649832 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m19:17:13.759421 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b08fc507a70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b08fbee4e60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b08fc2526c0>]}
+
+
+============================== 19:17:13.765575 | 36c09805-45d9-4e68-a1ca-6bf647ea3d11 ==============================
+[0m19:17:13.765575 [info ] [MainThread]: Running with dbt=1.11.2
+[0m19:17:13.766656 [debug] [MainThread]: running dbt with arguments {'profiles_dir': '/home/codespace/.dbt', 'empty': 'None', 'indirect_selection': 'eager', 'version_check': 'True', 'log_cache_events': 'False', 'introspect': 'True', 'printer_width': '80', 'log_format': 'default', 'use_colors': 'True', 'warn_error': 'None', 'quiet': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'write_json': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'invocation_command': 'dbt seed', 'log_path': '/workspaces/building_blocks/analytics_engineering_project/logs', 'no_print': 'None', 'use_experimental_parser': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'debug': 'False'}
+[0m19:17:14.095828 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '36c09805-45d9-4e68-a1ca-6bf647ea3d11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b08fb7085f0>]}
+[0m19:17:14.183273 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '36c09805-45d9-4e68-a1ca-6bf647ea3d11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b08fb54ba70>]}
+[0m19:17:14.185193 [info ] [MainThread]: Registered adapter: duckdb=1.10.0
+[0m19:17:14.381964 [debug] [MainThread]: checksum: 3d40d8bbe1bef07db1c24822f2dbfff8bc07f2a48ed4fe2658a40653aec0b54b, vars: {}, profile: , target: , version: 1.11.2
+[0m19:17:14.554637 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m19:17:14.555200 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m19:17:14.555656 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m19:17:14.774262 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '36c09805-45d9-4e68-a1ca-6bf647ea3d11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b08f6a7fd70>]}
+[0m19:17:15.243358 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/building_blocks/analytics_engineering_project/target/manifest.json
+[0m19:17:15.250210 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/building_blocks/analytics_engineering_project/target/semantic_manifest.json
+[0m19:17:15.306933 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '36c09805-45d9-4e68-a1ca-6bf647ea3d11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b08f6411730>]}
+[0m19:17:15.308086 [info ] [MainThread]: Found 15 models, 5 seeds, 53 data tests, 3 sources, 472 macros
+[0m19:17:15.309738 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '36c09805-45d9-4e68-a1ca-6bf647ea3d11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b08f6a2c560>]}
+[0m19:17:15.315558 [info ] [MainThread]: 
+[0m19:17:15.317347 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m19:17:15.318320 [info ] [MainThread]: 
+[0m19:17:15.320928 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m19:17:15.335156 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_analytics_engineering_project'
+[0m19:17:15.404267 [debug] [ThreadPool]: Using duckdb connection "list_analytics_engineering_project"
+[0m19:17:15.405095 [debug] [ThreadPool]: On list_analytics_engineering_project: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "analytics_engineering_project", "target_name": "dev", "connection_name": "list_analytics_engineering_project"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"analytics_engineering_project"'
+    
+  
+  
+[0m19:17:15.405925 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m19:17:15.428274 [debug] [ThreadPool]: SQL status: OK in 0.022 seconds
+[0m19:17:15.430572 [debug] [ThreadPool]: On list_analytics_engineering_project: Close
+[0m19:17:15.431786 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_analytics_engineering_project, now create_analytics_engineering_project_main)
+[0m19:17:15.432718 [debug] [ThreadPool]: Creating schema "database: "analytics_engineering_project"
+schema: "main"
+"
+[0m19:17:15.442047 [debug] [ThreadPool]: Using duckdb connection "create_analytics_engineering_project_main"
+[0m19:17:15.442596 [debug] [ThreadPool]: On create_analytics_engineering_project_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "analytics_engineering_project", "target_name": "dev", "connection_name": "create_analytics_engineering_project_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='analytics_engineering_project'
+        and type='sqlite'
+    
+  
+[0m19:17:15.443100 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:17:15.444193 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m19:17:15.445551 [debug] [ThreadPool]: Using duckdb connection "create_analytics_engineering_project_main"
+[0m19:17:15.446041 [debug] [ThreadPool]: On create_analytics_engineering_project_main: BEGIN
+[0m19:17:15.446720 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m19:17:15.447199 [debug] [ThreadPool]: Using duckdb connection "create_analytics_engineering_project_main"
+[0m19:17:15.447699 [debug] [ThreadPool]: On create_analytics_engineering_project_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "analytics_engineering_project", "target_name": "dev", "connection_name": "create_analytics_engineering_project_main"} */
+
+    
+    
+        create schema if not exists "analytics_engineering_project"."main"
+    
+[0m19:17:15.448672 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m19:17:15.450260 [debug] [ThreadPool]: On create_analytics_engineering_project_main: COMMIT
+[0m19:17:15.450997 [debug] [ThreadPool]: Using duckdb connection "create_analytics_engineering_project_main"
+[0m19:17:15.451504 [debug] [ThreadPool]: On create_analytics_engineering_project_main: COMMIT
+[0m19:17:15.452405 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m19:17:15.453123 [debug] [ThreadPool]: On create_analytics_engineering_project_main: Close
+[0m19:17:15.456775 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_analytics_engineering_project_main, now list_analytics_engineering_project_main)
+[0m19:17:15.462530 [debug] [ThreadPool]: Using duckdb connection "list_analytics_engineering_project_main"
+[0m19:17:15.463107 [debug] [ThreadPool]: On list_analytics_engineering_project_main: BEGIN
+[0m19:17:15.463576 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m19:17:15.464352 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m19:17:15.464843 [debug] [ThreadPool]: Using duckdb connection "list_analytics_engineering_project_main"
+[0m19:17:15.465374 [debug] [ThreadPool]: On list_analytics_engineering_project_main: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "analytics_engineering_project", "target_name": "dev", "connection_name": "list_analytics_engineering_project_main"} */
+select
+      'analytics_engineering_project' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'analytics_engineering_project'
+  
+[0m19:17:15.476730 [debug] [ThreadPool]: SQL status: OK in 0.011 seconds
+[0m19:17:15.478221 [debug] [ThreadPool]: On list_analytics_engineering_project_main: ROLLBACK
+[0m19:17:15.479531 [debug] [ThreadPool]: Failed to rollback 'list_analytics_engineering_project_main'
+[0m19:17:15.480013 [debug] [ThreadPool]: On list_analytics_engineering_project_main: Close
+[0m19:17:15.481636 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '36c09805-45d9-4e68-a1ca-6bf647ea3d11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b08f69edbe0>]}
+[0m19:17:15.482290 [debug] [MainThread]: Using duckdb connection "master"
+[0m19:17:15.482746 [debug] [MainThread]: On master: BEGIN
+[0m19:17:15.483255 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m19:17:15.484032 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m19:17:15.484533 [debug] [MainThread]: On master: COMMIT
+[0m19:17:15.485112 [debug] [MainThread]: Using duckdb connection "master"
+[0m19:17:15.485804 [debug] [MainThread]: On master: COMMIT
+[0m19:17:15.486995 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m19:17:15.487641 [debug] [MainThread]: On master: Close
+[0m19:17:15.490012 [debug] [Thread-1 (]: Began running node seed.analytics_engineering_project.dx_codes
+[0m19:17:15.490695 [info ] [Thread-1 (]: 1 of 5 START seed file main.dx_codes ........................................... [RUN]
+[0m19:17:15.491421 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_analytics_engineering_project_main, now seed.analytics_engineering_project.dx_codes)
+[0m19:17:15.491976 [debug] [Thread-1 (]: Began compiling node seed.analytics_engineering_project.dx_codes
+[0m19:17:15.492524 [debug] [Thread-1 (]: Began executing node seed.analytics_engineering_project.dx_codes
+[0m19:17:15.531654 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.dx_codes"
+[0m19:17:15.532267 [debug] [Thread-1 (]: On seed.analytics_engineering_project.dx_codes: BEGIN
+[0m19:17:15.532793 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:17:15.533739 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:17:15.534304 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.dx_codes"
+[0m19:17:15.534834 [debug] [Thread-1 (]: On seed.analytics_engineering_project.dx_codes: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "analytics_engineering_project", "target_name": "dev", "node_id": "seed.analytics_engineering_project.dx_codes"} */
+truncate table "analytics_engineering_project"."main"."dx_codes"
+[0m19:17:15.535854 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:17:15.550037 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.dx_codes"
+[0m19:17:15.550609 [debug] [Thread-1 (]: On seed.analytics_engineering_project.dx_codes: 
+          COPY "analytics_engineering_project"."main"."dx_codes" FROM '/workspaces/building_blocks/analytics_engineering_project/seeds/dx_codes.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m19:17:15.555431 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m19:17:15.561204 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.analytics_engineering_project.dx_codes"
+[0m19:17:15.577284 [debug] [Thread-1 (]: On seed.analytics_engineering_project.dx_codes: COMMIT
+[0m19:17:15.578149 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.dx_codes"
+[0m19:17:15.579275 [debug] [Thread-1 (]: On seed.analytics_engineering_project.dx_codes: COMMIT
+[0m19:17:15.599855 [debug] [Thread-1 (]: SQL status: OK in 0.020 seconds
+[0m19:17:15.603172 [debug] [Thread-1 (]: On seed.analytics_engineering_project.dx_codes: Close
+[0m19:17:15.605930 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '36c09805-45d9-4e68-a1ca-6bf647ea3d11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b08fddf1520>]}
+[0m19:17:15.608321 [info ] [Thread-1 (]: 1 of 5 OK loaded seed file main.dx_codes ....................................... [[32mINSERT 8[0m in 0.11s]
+[0m19:17:15.609671 [debug] [Thread-1 (]: Finished running node seed.analytics_engineering_project.dx_codes
+[0m19:17:15.610587 [debug] [Thread-1 (]: Began running node seed.analytics_engineering_project.ehr_data
+[0m19:17:15.611684 [info ] [Thread-1 (]: 2 of 5 START seed file main.ehr_data ........................................... [RUN]
+[0m19:17:15.612749 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.analytics_engineering_project.dx_codes, now seed.analytics_engineering_project.ehr_data)
+[0m19:17:15.613706 [debug] [Thread-1 (]: Began compiling node seed.analytics_engineering_project.ehr_data
+[0m19:17:15.614691 [debug] [Thread-1 (]: Began executing node seed.analytics_engineering_project.ehr_data
+[0m19:17:15.627455 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.ehr_data"
+[0m19:17:15.628183 [debug] [Thread-1 (]: On seed.analytics_engineering_project.ehr_data: BEGIN
+[0m19:17:15.628832 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:17:15.630157 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:17:15.630973 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.ehr_data"
+[0m19:17:15.631767 [debug] [Thread-1 (]: On seed.analytics_engineering_project.ehr_data: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "analytics_engineering_project", "target_name": "dev", "node_id": "seed.analytics_engineering_project.ehr_data"} */
+truncate table "analytics_engineering_project"."main"."ehr_data"
+[0m19:17:15.633157 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:17:15.635299 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.ehr_data"
+[0m19:17:15.636035 [debug] [Thread-1 (]: On seed.analytics_engineering_project.ehr_data: 
+          COPY "analytics_engineering_project"."main"."ehr_data" FROM '/workspaces/building_blocks/analytics_engineering_project/seeds/ehr_data.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m19:17:15.639618 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m19:17:15.640535 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.analytics_engineering_project.ehr_data"
+[0m19:17:15.642465 [debug] [Thread-1 (]: On seed.analytics_engineering_project.ehr_data: COMMIT
+[0m19:17:15.643037 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.ehr_data"
+[0m19:17:15.643561 [debug] [Thread-1 (]: On seed.analytics_engineering_project.ehr_data: COMMIT
+[0m19:17:15.647051 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m19:17:15.648010 [debug] [Thread-1 (]: On seed.analytics_engineering_project.ehr_data: Close
+[0m19:17:15.648726 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '36c09805-45d9-4e68-a1ca-6bf647ea3d11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b08f573c6b0>]}
+[0m19:17:15.649449 [info ] [Thread-1 (]: 2 of 5 OK loaded seed file main.ehr_data ....................................... [[32mINSERT 20[0m in 0.04s]
+[0m19:17:15.650306 [debug] [Thread-1 (]: Finished running node seed.analytics_engineering_project.ehr_data
+[0m19:17:15.650918 [debug] [Thread-1 (]: Began running node seed.analytics_engineering_project.patient_reported_data
+[0m19:17:15.651678 [info ] [Thread-1 (]: 3 of 5 START seed file main.patient_reported_data .............................. [RUN]
+[0m19:17:15.652346 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.analytics_engineering_project.ehr_data, now seed.analytics_engineering_project.patient_reported_data)
+[0m19:17:15.652902 [debug] [Thread-1 (]: Began compiling node seed.analytics_engineering_project.patient_reported_data
+[0m19:17:15.653450 [debug] [Thread-1 (]: Began executing node seed.analytics_engineering_project.patient_reported_data
+[0m19:17:15.661629 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.patient_reported_data"
+[0m19:17:15.662242 [debug] [Thread-1 (]: On seed.analytics_engineering_project.patient_reported_data: BEGIN
+[0m19:17:15.663189 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:17:15.664333 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:17:15.664924 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.patient_reported_data"
+[0m19:17:15.665467 [debug] [Thread-1 (]: On seed.analytics_engineering_project.patient_reported_data: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "analytics_engineering_project", "target_name": "dev", "node_id": "seed.analytics_engineering_project.patient_reported_data"} */
+truncate table "analytics_engineering_project"."main"."patient_reported_data"
+[0m19:17:15.666388 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m19:17:15.667895 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.patient_reported_data"
+[0m19:17:15.668462 [debug] [Thread-1 (]: On seed.analytics_engineering_project.patient_reported_data: 
+          COPY "analytics_engineering_project"."main"."patient_reported_data" FROM '/workspaces/building_blocks/analytics_engineering_project/seeds/patient_reported_data.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m19:17:15.671216 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m19:17:15.672141 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.analytics_engineering_project.patient_reported_data"
+[0m19:17:15.674032 [debug] [Thread-1 (]: On seed.analytics_engineering_project.patient_reported_data: COMMIT
+[0m19:17:15.674588 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.patient_reported_data"
+[0m19:17:15.675140 [debug] [Thread-1 (]: On seed.analytics_engineering_project.patient_reported_data: COMMIT
+[0m19:17:15.678173 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m19:17:15.679099 [debug] [Thread-1 (]: On seed.analytics_engineering_project.patient_reported_data: Close
+[0m19:17:15.679748 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '36c09805-45d9-4e68-a1ca-6bf647ea3d11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b08f575e3f0>]}
+[0m19:17:15.680422 [info ] [Thread-1 (]: 3 of 5 OK loaded seed file main.patient_reported_data .......................... [[32mINSERT 16[0m in 0.03s]
+[0m19:17:15.681243 [debug] [Thread-1 (]: Finished running node seed.analytics_engineering_project.patient_reported_data
+[0m19:17:15.681836 [debug] [Thread-1 (]: Began running node seed.analytics_engineering_project.payer_data
+[0m19:17:15.682586 [info ] [Thread-1 (]: 4 of 5 START seed file main.payer_data ......................................... [RUN]
+[0m19:17:15.683249 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.analytics_engineering_project.patient_reported_data, now seed.analytics_engineering_project.payer_data)
+[0m19:17:15.683785 [debug] [Thread-1 (]: Began compiling node seed.analytics_engineering_project.payer_data
+[0m19:17:15.684351 [debug] [Thread-1 (]: Began executing node seed.analytics_engineering_project.payer_data
+[0m19:17:15.691381 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.payer_data"
+[0m19:17:15.692053 [debug] [Thread-1 (]: On seed.analytics_engineering_project.payer_data: BEGIN
+[0m19:17:15.692565 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:17:15.693335 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:17:15.693864 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.payer_data"
+[0m19:17:15.694505 [debug] [Thread-1 (]: On seed.analytics_engineering_project.payer_data: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "analytics_engineering_project", "target_name": "dev", "node_id": "seed.analytics_engineering_project.payer_data"} */
+truncate table "analytics_engineering_project"."main"."payer_data"
+[0m19:17:15.695533 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m19:17:15.697813 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.payer_data"
+[0m19:17:15.698610 [debug] [Thread-1 (]: On seed.analytics_engineering_project.payer_data: 
+          COPY "analytics_engineering_project"."main"."payer_data" FROM '/workspaces/building_blocks/analytics_engineering_project/seeds/payer_data.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m19:17:15.703384 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m19:17:15.704722 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.analytics_engineering_project.payer_data"
+[0m19:17:15.707690 [debug] [Thread-1 (]: On seed.analytics_engineering_project.payer_data: COMMIT
+[0m19:17:15.708513 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.payer_data"
+[0m19:17:15.709237 [debug] [Thread-1 (]: On seed.analytics_engineering_project.payer_data: COMMIT
+[0m19:17:15.712036 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m19:17:15.713215 [debug] [Thread-1 (]: On seed.analytics_engineering_project.payer_data: Close
+[0m19:17:15.714088 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '36c09805-45d9-4e68-a1ca-6bf647ea3d11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b08f5760470>]}
+[0m19:17:15.714979 [info ] [Thread-1 (]: 4 of 5 OK loaded seed file main.payer_data ..................................... [[32mINSERT 24[0m in 0.03s]
+[0m19:17:15.719147 [debug] [Thread-1 (]: Finished running node seed.analytics_engineering_project.payer_data
+[0m19:17:15.721123 [debug] [Thread-1 (]: Began running node seed.analytics_engineering_project.source_priority
+[0m19:17:15.722910 [info ] [Thread-1 (]: 5 of 5 START seed file main.source_priority .................................... [RUN]
+[0m19:17:15.724255 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly seed.analytics_engineering_project.payer_data, now seed.analytics_engineering_project.source_priority)
+[0m19:17:15.725044 [debug] [Thread-1 (]: Began compiling node seed.analytics_engineering_project.source_priority
+[0m19:17:15.725857 [debug] [Thread-1 (]: Began executing node seed.analytics_engineering_project.source_priority
+[0m19:17:15.737730 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.source_priority"
+[0m19:17:15.738319 [debug] [Thread-1 (]: On seed.analytics_engineering_project.source_priority: BEGIN
+[0m19:17:15.738838 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m19:17:15.739695 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m19:17:15.740250 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.source_priority"
+[0m19:17:15.740776 [debug] [Thread-1 (]: On seed.analytics_engineering_project.source_priority: /* {"app": "dbt", "dbt_version": "1.11.2", "profile_name": "analytics_engineering_project", "target_name": "dev", "node_id": "seed.analytics_engineering_project.source_priority"} */
+truncate table "analytics_engineering_project"."main"."source_priority"
+[0m19:17:15.741745 [debug] [Thread-1 (]: SQL status: OK in 0.000 seconds
+[0m19:17:15.743165 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.source_priority"
+[0m19:17:15.743725 [debug] [Thread-1 (]: On seed.analytics_engineering_project.source_priority: 
+          COPY "analytics_engineering_project"."main"."source_priority" FROM '/workspaces/building_blocks/analytics_engineering_project/seeds/source_priority.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        ...
+[0m19:17:15.745767 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m19:17:15.746664 [debug] [Thread-1 (]: Writing runtime SQL for node "seed.analytics_engineering_project.source_priority"
+[0m19:17:15.748672 [debug] [Thread-1 (]: On seed.analytics_engineering_project.source_priority: COMMIT
+[0m19:17:15.749243 [debug] [Thread-1 (]: Using duckdb connection "seed.analytics_engineering_project.source_priority"
+[0m19:17:15.749760 [debug] [Thread-1 (]: On seed.analytics_engineering_project.source_priority: COMMIT
+[0m19:17:15.752386 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m19:17:15.753300 [debug] [Thread-1 (]: On seed.analytics_engineering_project.source_priority: Close
+[0m19:17:15.753984 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '36c09805-45d9-4e68-a1ca-6bf647ea3d11', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b08f57999d0>]}
+[0m19:17:15.754631 [info ] [Thread-1 (]: 5 of 5 OK loaded seed file main.source_priority ................................ [[32mINSERT 3[0m in 0.03s]
+[0m19:17:15.755466 [debug] [Thread-1 (]: Finished running node seed.analytics_engineering_project.source_priority
+[0m19:17:15.757295 [debug] [MainThread]: Using duckdb connection "master"
+[0m19:17:15.757756 [debug] [MainThread]: On master: BEGIN
+[0m19:17:15.758280 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m19:17:15.759327 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m19:17:15.760089 [debug] [MainThread]: On master: COMMIT
+[0m19:17:15.760778 [debug] [MainThread]: Using duckdb connection "master"
+[0m19:17:15.761579 [debug] [MainThread]: On master: COMMIT
+[0m19:17:15.762367 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m19:17:15.763206 [debug] [MainThread]: On master: Close
+[0m19:17:15.764122 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m19:17:15.764935 [debug] [MainThread]: Connection 'seed.analytics_engineering_project.source_priority' was properly closed.
+[0m19:17:15.765724 [info ] [MainThread]: 
+[0m19:17:15.766671 [info ] [MainThread]: Finished running 5 seeds in 0 hours 0 minutes and 0.45 seconds (0.45s).
+[0m19:17:15.769171 [debug] [MainThread]: Command end result
+[0m19:17:15.824149 [debug] [MainThread]: Wrote artifact WritableManifest to /workspaces/building_blocks/analytics_engineering_project/target/manifest.json
+[0m19:17:15.827289 [debug] [MainThread]: Wrote artifact SemanticManifest to /workspaces/building_blocks/analytics_engineering_project/target/semantic_manifest.json
+[0m19:17:15.835630 [debug] [MainThread]: Wrote artifact RunExecutionResult to /workspaces/building_blocks/analytics_engineering_project/target/run_results.json
+[0m19:17:15.836172 [info ] [MainThread]: 
+[0m19:17:15.836993 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m19:17:15.837561 [info ] [MainThread]: 
+[0m19:17:15.838185 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=5
+[0m19:17:15.839371 [debug] [MainThread]: Resource report: {"command_name": "seed", "command_success": true, "command_wall_clock_time": 2.1541052, "process_in_blocks": "224", "process_kernel_time": 0.450674, "process_mem_max_rss": "192304", "process_out_blocks": "3240", "process_user_time": 4.679933}
+[0m19:17:15.840017 [debug] [MainThread]: Command `dbt seed` succeeded at 19:17:15.839894 after 2.15 seconds
+[0m19:17:15.840544 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b08fbee4e60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b08fb85c440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7b08f6a7d5e0>]}
+[0m19:17:15.841095 [debug] [MainThread]: Flushing usage events
+[0m19:17:15.949735 [debug] [MainThread]: An error was encountered while trying to flush usage events

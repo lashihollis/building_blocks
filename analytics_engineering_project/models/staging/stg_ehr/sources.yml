@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: ehr
+    schema: main
+    tables:
+      - name: ehr_data

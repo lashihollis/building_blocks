@@ -1,0 +1,11 @@
+
+    
+    
+    truncate table "analytics_engineering_project"."main"."patient_reported_data";
+    -- dbt seed --
+    
+          COPY "analytics_engineering_project"."main"."patient_reported_data" FROM '/workspaces/building_blocks/analytics_engineering_project/seeds/patient_reported_data.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        
+
+;
+  

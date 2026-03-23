@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: payer
+    schema: main
+    tables:
+      - name: payer_data

@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: stg_patient_reported__vitals
+    description: |
+      Staged vital measurements from patient-reported source. Lowest trust ranking,
+      used as fallback when payer and EHR data are unavailable.
+    columns:
+      - name: patient_id
+        description: Patient identifier
+        tests:
+          - not_null
+      - name: encounter_id
+        description: Encounter where vital was recorded (may be null for patient-reported)
+      - name: encounter_date
+        description: Date of encounter (may be null for patient-reported)
+      - name: vital_date
+        description: Date vital was measured
+        tests:
+          - not_null
+      - name: vital_type
+        description: Type of vital measurement (BP_SYSTOLIC, BP_DIASTOLIC)
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['BP_SYSTOLIC', 'BP_DIASTOLIC']
+      - name: vital_value
+        description: Numeric value of the measurement
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 300
+      - name: vital_unit
+        description: Unit of measurement (mmHg)
+        tests:
+          - not_null
+      - name: source_system
+        description: Source system identifier ('patient_reported')

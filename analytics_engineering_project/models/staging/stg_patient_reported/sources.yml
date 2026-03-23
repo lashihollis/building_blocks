@@ -1,0 +1,7 @@
+version: 2
+
+sources:
+  - name: patient_reported
+    schema: main
+    tables:
+      - name: patient_reported_data
