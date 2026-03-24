@@ -1,4 +1,7 @@
-select
+
+  
+  create view "analytics_engineering_project"."main"."stg_fhir__vitals__dbt_tmp" as (
+    select
     patient_id,
     cast(null as string) as encounter_id,
     vital_date,
@@ -6,5 +9,6 @@ select
     vital_value,
     vital_unit,
     source_system
-from {{ source('fhir_data', 'vitals') }}
+from "fhir_data"."main"."vitals"
 where vital_type is not null
+  );

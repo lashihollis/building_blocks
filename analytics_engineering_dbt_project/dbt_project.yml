@@ -11,6 +11,8 @@ analysis-paths: ["analysis"]
 macro-paths: ["macros"]
 
 target-path: "target"
+on-run-start:
+  - "ATTACH 'fhir_data.duckdb' AS fhir_data"
 clean-targets:
   - "target"
   - "dbt_packages"

@@ -2,3 +2,4 @@ source_system,priority_rank,trust_level
 payer,1,high
 ehr,2,medium
 patient_reported,3,low
+fhir,1,high

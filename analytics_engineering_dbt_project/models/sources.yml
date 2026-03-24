@@ -20,9 +20,9 @@ sources:
 
 
   # New FHIR data source
-  - name: fhir
+  - name: fhir_data
     description: FHIR data ingested from Synthea API
-    database: fhir_data  # Or fhir if using combined
+    database: fhir_data
     schema: main
     tables:
       - name: patients

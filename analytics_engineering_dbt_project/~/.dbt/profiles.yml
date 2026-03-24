@@ -5,3 +5,6 @@ analytics_engineering_project:
       type: duckdb
       path: 'analytics_engineering_project.duckdb'
       schema: main
+      attach:
+        - database: '/path/to/analytics_engineering_dbtadd_project/fhir_data.duckdb'
+          alias: fhir_data
