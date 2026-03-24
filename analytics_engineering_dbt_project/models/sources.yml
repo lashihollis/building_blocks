@@ -1,0 +1,31 @@
+version: 2
+
+sources:
+  # Original seed data sources
+  - name: seeds
+    description: Original synthetic seed data
+    database: analytics_engineering_project  # Or original if using combined
+    schema: main
+    tables:
+      - name: payer_data
+        description: Payer source data (highest trust)
+      - name: ehr_data
+        description: EHR source data (medium trust)      
+      - name: patient_data
+        description: Patient-reported data (lowest trust)
+      - name: dx_codes
+        description: Diagnosis code lookup table      
+      - name: source_priority
+        description: Source priority lookup
+
+
+  # New FHIR data source
+  - name: fhir
+    description: FHIR data ingested from Synthea API
+    database: fhir_data  # Or fhir if using combined
+    schema: main
+    tables:
+      - name: patients
+        description: Patient demographics from FHIR
+      - name: vitals
+        description: Blood pressure observations from FHIR
