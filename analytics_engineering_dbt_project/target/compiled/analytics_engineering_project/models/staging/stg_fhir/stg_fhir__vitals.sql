@@ -5,6 +5,6 @@ select
     vital_type,
     vital_value,
     vital_unit,
-    source_system
+    'fhir' as source_system
 from "fhir_data"."main"."vitals"
 where vital_type is not null

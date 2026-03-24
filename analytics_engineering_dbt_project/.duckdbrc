@@ -1,0 +1,4 @@
+#makes sure duckdb uses fhir data as a source
+cat > ~/.duckdbrc << 'EOF'
+ATTACH '/workspaces/building_blocks/analytics_engineering_dbt_project/fhir_data.duckdb' AS fhir_data;
+EOF

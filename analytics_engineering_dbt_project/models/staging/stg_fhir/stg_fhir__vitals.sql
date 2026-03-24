@@ -5,6 +5,7 @@ select
     vital_type,
     vital_value,
     vital_unit,
-    source_system
+    'fhir' as source_system
 from {{ source('fhir_data', 'vitals') }}
 where vital_type is not null
+ 

@@ -24,7 +24,7 @@ select
     b.most_recent_bp_date,
     case
         --data is synthesized based on years 2023 and 2024
-        when b.most_recent_bp_date >= '2024-07-01' then 1 
+        when b.most_recent_bp_date >= (CURRENT_DATE - interval '180 days') then 1 
         else 0
     end as compliant
 from hypertension_patients h

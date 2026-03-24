@@ -16,6 +16,7 @@ ranked as (
             order by
                 case source_system
                     when 'payer' then 1
+                    when 'fhir' then 1
                     when 'ehr' then 2
                     when 'patient_reported' then 3
                 end
