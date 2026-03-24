@@ -93,7 +93,7 @@ def save_to_json(data, filename):
         json.dump(data, f, indent=2)
     print(f"Saved to data/raw/{filename}")
 
-def fetch_all_data(max_patients=15):
+def fetch_all_data(max_patients=100):
     """Main function to fetch all data"""
     print(f"\n{'='*50}")
     print("Starting FHIR Data Fetch")

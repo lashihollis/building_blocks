@@ -50,7 +50,8 @@ def transform_observations_to_csv():
     bp_observations = []
     for obs in observations:
         loinc = obs.get("loinc_code")
-        if loinc in ["8480-6", "8462-4"] and obs.get("value") is not None:
+        if loinc in [ "8480-6", "8462-4", "85354-9", 
+                     "55284-3", "35094-2","8478-0"] and obs.get("value") is not None:
             bp_observations.append(obs)
     
     if not bp_observations:
@@ -60,7 +61,14 @@ def transform_observations_to_csv():
     os.makedirs("data/processed", exist_ok=True)
     
     ingestion_date = datetime.now().isoformat()
-    vital_type_map = {"8480-6": "BP_SYSTOLIC", "8462-4": "BP_DIASTOLIC"}
+    vital_type_map = {
+        "8480-6": "BP_SYSTOLIC",           # Systolic
+        "8462-4": "BP_DIASTOLIC",          # Diastolic
+        "85354-9": "BP_PANEL",             # BP panel
+        "55284-3": "BP_SYSTOLIC_DIASTOLIC", # BP systolic & diastolic
+        "35094-2": "BP_MEAN",              # BP mean
+        "8478-0": "BP_MEAN"                # Mean BP
+    }
     
     with open("data/processed/observations.csv", "w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=[
