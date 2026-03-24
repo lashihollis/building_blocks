@@ -4,7 +4,7 @@
     truncate table "analytics_engineering_project"."main"."dx_codes";
     -- dbt seed --
     
-          COPY "analytics_engineering_project"."main"."dx_codes" FROM '/workspaces/building_blocks/analytics_engineering_project/seeds/dx_codes.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+          COPY "analytics_engineering_project"."main"."dx_codes" FROM '/workspaces/building_blocks/analytics_engineering_dbt_project/seeds/dx_codes.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
         
 
 ;
