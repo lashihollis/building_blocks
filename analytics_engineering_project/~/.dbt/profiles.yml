@@ -3,5 +3,8 @@ analytics_engineering_project:
   outputs:
     dev:
       type: duckdb
-      path: 'analytics_engineering_project.duckdb'
+      path: 'fhir_data.duckdb'
       schema: main
+      # shared DB path for fhir_quick_pipeline integration
+      # run `cd /workspaces/building_blocks/data_engineering_projects/fhir_quick_pipeline && python scripts/run_pipeline.py`
+      # then `cd /workspaces/building_blocks/analytics_engineering_project && dbt run`
