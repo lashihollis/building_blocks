@@ -1,0 +1,21 @@
+id: diabetes_bp_control
+description: Diabetic patients with controlled blood pressure
+
+population:
+  active: true
+  age_min: 18
+
+denominator:
+  conditions:
+    - diabetes
+
+numerator:
+  observations:
+    type: blood_pressure
+    systolic_lt: 140
+    diastolic_lt: 90
+    within_last_days: 365
+
+exclusions:
+  conditions:
+    - pregnancy

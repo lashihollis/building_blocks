@@ -37,12 +37,12 @@ seeds:
         tests:
           - not_null
           - accepted_values:
-              values: [1, 2, 3]
+              values: [1, 2, 3, 4]
       - name: trust_level
-        description: Human-readable trust level ('high', 'medium', 'low')
+        description: Human-readable trust level ('high', 'medium', 'medium_low', 'low')
         tests:
           - accepted_values:
-              values: ['high', 'medium', 'low']
+              values: ['high', 'medium', 'medium_low', 'low']
 
   - name: payer_data
     description: |

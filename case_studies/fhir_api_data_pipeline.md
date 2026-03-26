@@ -29,7 +29,7 @@ This project builds a Python-based data pipeline that:
 
 This pipeline performs the following steps:
 
-1. **Fetches 50 patients**  
+1. **Fetches 100 patients**  
    - Source: HAPI FHIR server (free synthetic dataset)
 2. **Extracts blood pressure observations**  
    - Uses LOINC codes:
