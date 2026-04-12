@@ -1,5 +1,6 @@
 viewing the project contents and practicing with dbt:
 -----------------------------------------------------
+- make sure you are in the correct folder (use pwd to check)
 - dbt seed
 - add packages.yml file to add dbt expectations
 - dbt deps to install pakage
@@ -9,7 +10,7 @@ viewing the project contents and practicing with dbt:
 
 to use duckdb:
 --------------
-installl homebrew (https://brew.sh/)
+install homebrew (https://brew.sh/)
 
 ==> Next steps:
 - Run these commands in your terminal to add Homebrew to your PATH:
