@@ -1,0 +1,11 @@
+
+    
+    
+    truncate table "quality_measures"."main"."ehr_data";
+    -- dbt seed --
+    
+          COPY "quality_measures"."main"."ehr_data" FROM '/Users/lashihollis/building_blocks/hc_quality_measures_dbt/seeds/ehr_data.csv' (FORMAT CSV, HEADER TRUE, DELIMITER ',')
+        
+
+;
+  
