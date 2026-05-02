@@ -1,0 +1,53 @@
+version: 2
+
+models:
+  - name: int_vitals_unioned
+    description: |
+      Union of all vital measurements from payer, EHR, and patient-reported sources.
+      Contains duplicates across sources that will be resolved in ranking model.
+    columns:
+      - name: patient_id
+        description: Patient identifier
+        tests:
+          - not_null
+      - name: encounter_id
+        description: Encounter where vital was recorded (may be null)
+      - name: vital_date
+        description: Date vital was measured
+        tests:
+          - not_null
+      - name: vital_type
+        description: Type of vital measurement
+      - name: vital_value
+        description: Numeric value of the measurement
+      - name: vital_unit
+        description: Unit of measurement
+      - name: source_system
+        description: Original source system
+
+  - name: int_vitals_ranked
+    description: |
+      Deduplicated vital measurements with source ranking applied. For each patient
+      and vital date, selects the highest priority source (payer > ehr > patient_reported).
+      This ensures each measurement appears only once with the most trusted source.
+    columns:
+      - name: patient_id
+        description: Patient identifier
+        tests:
+          - not_null
+      - name: encounter_id
+        description: Encounter where vital was recorded
+      - name: vital_date
+        description: Date vital was measured
+        tests:
+          - not_null
+      - name: vital_type
+        description: Type of vital measurement
+      - name: vital_value
+        description: Numeric value of the measurement
+      - name: vital_unit
+        description: Unit of measurement
+      - name: source_system
+        description: Selected source after ranking (highest trust available)
+      - name: rank
+        description: Priority rank used for selection (1 = highest)

@@ -1,0 +1,79 @@
+version: 2
+
+models:
+  - name: stg_ehr__encounters
+    description: |
+      Staged encounter data from EHR source. Clinical encounter data with medium
+      trust ranking.
+    columns:
+      - name: encounter_id
+        description: Unique identifier for the encounter
+        tests:
+          - unique
+          - not_null
+      - name: patient_id
+        description: Patient identifier
+        tests:
+          - not_null
+      - name: encounter_date
+        description: Date of the encounter
+        tests:
+          - not_null
+      - name: source_system
+        description: Source system identifier ('ehr')
+
+  - name: stg_ehr__diagnosis
+    description: |
+      Staged diagnosis data from EHR source. Clinical diagnoses recorded during
+      encounters.
+    columns:
+      - name: patient_id
+        description: Patient identifier
+        tests:
+          - not_null
+      - name: encounter_id
+        description: Encounter where diagnosis was recorded
+        tests:
+          - not_null
+      - name: dx_code
+        description: ICD-10 diagnosis code
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dx_codes')
+              field: dx_code
+
+  - name: stg_ehr__vitals
+    description: |
+      Staged vital measurements from EHR source. Clinical vital signs with medium
+      trust ranking.
+    columns:
+      - name: patient_id
+        description: Patient identifier
+        tests:
+          - not_null
+      - name: encounter_id
+        description: Encounter where vital was recorded
+      - name: vital_date
+        description: Date vital was measured
+        tests:
+          - not_null
+      - name: vital_type
+        description: Type of vital measurement (BP_SYSTOLIC, BP_DIASTOLIC)
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['BP_SYSTOLIC', 'BP_DIASTOLIC']
+      - name: vital_value
+        description: Numeric value of the measurement
+        tests:
+          - not_null
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 300
+      - name: vital_unit
+        description: Unit of measurement (mmHg)
+        tests:
+          - not_null
+      - name: source_system
+        description: Source system identifier ('ehr')

@@ -1,0 +1,17 @@
+name: 'hc_quality_measures_dbt'
+version: '1.0.0'
+config-version: 2
+
+profile: 'hc_quality_measures_dbt'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+test-paths: ["tests"]
+analysis-paths: ["analysis"]
+macro-paths: ["macros"]
+
+target-path: "target"
+
+clean-targets:
+  - "target"
+  - "dbt_packages"

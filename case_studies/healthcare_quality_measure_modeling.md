@@ -1,5 +1,5 @@
 # Healthcare Quality Measures Data Modeling  
-*(analytics_engineering_dbt_project)*
+*(hc_quality_measures_dbt)*
 
 ---
 

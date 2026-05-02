@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: mrt_vitals
+    description: |
+      Fact table containing cleaned, ranked vital measurements. One row per vital
+      measurement per patient, with duplicates resolved via source priority ranking.
+      This is the primary table for vital data analysis.
+    columns:
+      - name: patient_id
+        description: Patient identifier
+        tests:
+          - not_null
+      - name: encounter_id
+        description: Encounter where vital was recorded (may be null)
+      - name: vital_date
+        description: Date vital was measured
+        tests:
+          - not_null
+      - name: vital_type
+        description: Type of vital measurement (BP_SYSTOLIC, BP_DIASTOLIC)
+      - name: vital_value
+        description: Numeric value of the measurement
+      - name: vital_unit
+        description: Unit of measurement
+      - name: source_system
+        description: Source system that provided the selected measurement

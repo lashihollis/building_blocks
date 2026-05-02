@@ -1,0 +1,23 @@
+# dbt generated folders
+target/
+dbt_packages/
+dbt_modules/
+logs/
+
+# Packages lock file
+package-lock.yml
+
+# Credentials and secrets
+profiles.yml
+.env
+
+# Python/Environment
+__pycache__/
+venv/
+
+# OS specific
+.DS_Store
+
+# IDEs
+.vscode/
+.idea/

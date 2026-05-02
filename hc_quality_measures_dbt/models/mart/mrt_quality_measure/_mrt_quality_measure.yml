@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: mrt_quality_measure
+    description: |
+      Final quality measure table answering the business question: which hypertension
+      patients have had a blood pressure reading within the last year?
+      One row per hypertension patient with compliance flag.
+    columns:
+      - name: patient_id
+        description: Patient identifier
+        tests:
+          - unique
+          - not_null
+      - name: most_recent_bp_date
+        description: Date of most recent blood pressure reading (null if no reading)
+      - name: compliant
+        description: |
+          Flag indicating if patient had BP reading within last 365 days.
+          1 = compliant, 0 = not compliant
+        tests:
+          - not_null
+          - accepted_values:
+              values: [0, 1]

@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: int_encounters_unioned
+    description: |
+      Union of all encounter data from payer and EHR sources. Patient-reported
+      encounters excluded as they lack structured encounter identifiers.
+    columns:
+      - name: encounter_id
+        description: Unique identifier for the encounter
+        tests:
+          - unique
+          - not_null
+      - name: patient_id
+        description: Patient identifier
+        tests:
+          - not_null
+      - name: encounter_date
+        description: Date of the encounter
+        tests:
+          - not_null
+      - name: source_system
+        description: Original source system
