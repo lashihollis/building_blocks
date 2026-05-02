@@ -1,0 +1,7 @@
+{
+  "fetch_timestamp": "2026-03-24T15:29:44.245209",
+  "fhir_server": "http://syntheticmass.mitre.org/fhir",
+  "total_patients": 0,
+  "total_observations": 0,
+  "observations_by_loinc": {}
+}
