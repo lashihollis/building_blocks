@@ -1,7 +1,7 @@
 import duckdb
 import os
 
-def load_to_duckdb(db_path="fhir_data.duckdb"):
+def load_to_duckdb(db_path="fhir_quick_pipeline/fhir_data.duckdb"):
     """Load processed CSVs to DuckDB"""
     
     print(f"\n{'='*100}")

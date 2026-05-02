@@ -6,17 +6,17 @@ echo "========================="
 # Step 1: Fetch FHIR data
 echo ""
 echo "📡 Step 1: Fetching data from FHIR API..."
-python scripts/fetch_fhir.py
+python fhir_quick_pipeline/scripts/fetch_fhir.py
 
 # Step 2: Transform to CSV
 echo ""
 echo "🔄 Step 2: Transforming to CSV..."
-python scripts/transform_to_csv.py
+python fhir_quick_pipeline/scripts/transform_to_csv.py
 
 # Step 3: Load to DuckDB
 echo ""
 echo "💾 Step 3: Loading to DuckDB..."
-python scripts/load_to_duckdb.py
+python fhir_quick_pipeline/scripts/load_to_duckdb.py
 
 echo ""
 echo "✅ Pipeline complete!"

@@ -1,702 +1,702 @@
 [
   {
-    "patient_id": "89181652",
-    "gender": "female",
-    "birth_date": "1975-01-02",
-    "family_name": "Karla",
-    "given_name": "Nutela"
-  },
-  {
-    "patient_id": "89181702",
-    "gender": null,
-    "birth_date": null,
-    "family_name": "Garmon",
-    "given_name": "Johnny"
-  },
-  {
-    "patient_id": "89181703",
-    "gender": "male",
-    "birth_date": "1980-01-23",
-    "family_name": "Patient-test",
-    "given_name": "Patient-name"
-  },
-  {
-    "patient_id": "89181704",
-    "gender": "female",
-    "birth_date": "1985-05-19",
-    "family_name": "Johnson",
-    "given_name": "Jane Marie"
-  },
-  {
-    "patient_id": "89181705",
-    "gender": "male",
-    "birth_date": "2001-02-01",
-    "family_name": "Doe",
-    "given_name": "Jona"
-  },
-  {
-    "patient_id": "89185702",
-    "gender": "male",
-    "birth_date": null,
-    "family_name": "Green",
-    "given_name": "Green Acres1"
-  },
-  {
-    "patient_id": "89185811",
-    "gender": null,
-    "birth_date": null,
-    "family_name": "",
-    "given_name": "Pius Kariuki Jr."
-  },
-  {
-    "patient_id": "89185911",
-    "gender": null,
-    "birth_date": null,
-    "family_name": "",
-    "given_name": "Ajith "
-  },
-  {
-    "patient_id": "89186093",
-    "gender": "male",
-    "birth_date": "1900-01-15",
-    "family_name": "rfgg",
-    "given_name": "Christin"
-  },
-  {
-    "patient_id": "89186257",
-    "gender": null,
-    "birth_date": null,
-    "family_name": "Nume",
-    "given_name": "Christina P."
-  },
-  {
-    "patient_id": "89186366",
-    "gender": null,
-    "birth_date": null,
-    "family_name": "Known",
-    "given_name": "Jack Hilton"
-  },
-  {
-    "patient_id": "89186700",
-    "gender": null,
-    "birth_date": null,
-    "family_name": "TestTestTest",
-    "given_name": "Jon Snow"
-  },
-  {
-    "patient_id": "89186842",
-    "gender": "male",
-    "birth_date": null,
-    "family_name": "Eziagor",
-    "given_name": ""
-  },
-  {
-    "patient_id": "89186960",
-    "gender": null,
-    "birth_date": null,
-    "family_name": "test test",
-    "given_name": "Jane Doe"
-  },
-  {
-    "patient_id": "89187145",
-    "gender": null,
-    "birth_date": null,
-    "family_name": "",
-    "given_name": ""
-  },
-  {
-    "patient_id": "89187290",
-    "gender": null,
-    "birth_date": null,
-    "family_name": "Olson",
-    "given_name": "Jane Doe"
-  },
-  {
-    "patient_id": "89187596",
-    "gender": null,
-    "birth_date": null,
-    "family_name": "",
-    "given_name": "Rita Z\u00e1goni"
-  },
-  {
-    "patient_id": "89384554",
+    "patient_id": "90272570",
     "gender": "female",
     "birth_date": "1980-01-02",
     "family_name": "Karla",
-    "given_name": "laborato2"
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89389617",
-    "gender": "female",
-    "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
-  },
-  {
-    "patient_id": "89460561",
-    "gender": "female",
-    "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
-  },
-  {
-    "patient_id": "89669462",
-    "gender": "female",
-    "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
-  },
-  {
-    "patient_id": "89698641",
-    "gender": "female",
-    "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
-  },
-  {
-    "patient_id": "89722258",
-    "gender": "female",
-    "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
-  },
-  {
-    "patient_id": "89728607",
-    "gender": "female",
-    "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
-  },
-  {
-    "patient_id": "89729454",
-    "gender": "female",
-    "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
-  },
-  {
-    "patient_id": "89730602",
+    "patient_id": "90274720",
     "gender": "female",
     "birth_date": "1980-01-02",
     "family_name": "Karla",
-    "given_name": "Raju"
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89737858",
+    "patient_id": "90277570",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89738088",
+    "patient_id": "90278459",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89739093",
+    "patient_id": "90279367",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89740082",
+    "patient_id": "90279832",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89741151",
+    "patient_id": "90280874",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89742205",
+    "patient_id": "90282034",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89743153",
+    "patient_id": "90282905",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89744042",
+    "patient_id": "90284032",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89744881",
+    "patient_id": "90285184",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89745776",
+    "patient_id": "90286136",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "Magna",
-    "given_name": "Veios"
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89746652",
+    "patient_id": "90286814",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89750510",
+    "patient_id": "90288480",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89752525",
+    "patient_id": "90289363",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89753553",
+    "patient_id": "90290271",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89754680",
+    "patient_id": "90291138",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89756225",
+    "patient_id": "90293390",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89757010",
+    "patient_id": "90294331",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89757796",
+    "patient_id": "90295411",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89758513",
+    "patient_id": "90296508",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89759504",
+    "patient_id": "90297555",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89760492",
+    "patient_id": "90298674",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89761337",
+    "patient_id": "90300434",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89762313",
+    "patient_id": "90301328",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89763347",
+    "patient_id": "90302298",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89764248",
+    "patient_id": "90303151",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89765224",
+    "patient_id": "90304240",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89766130",
+    "patient_id": "90305357",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89766893",
+    "patient_id": "90306286",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89767729",
+    "patient_id": "90307382",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89768551",
+    "patient_id": "90308463",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89769308",
+    "patient_id": "90309535",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89770225",
+    "patient_id": "90310325",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89771212",
+    "patient_id": "90312814",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89777709",
+    "patient_id": "90313709",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89791856",
+    "patient_id": "90314586",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89859406",
+    "patient_id": "90315633",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89859759",
+    "patient_id": "90316763",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89860703",
+    "patient_id": "90317658",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89861438",
+    "patient_id": "90318707",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89862225",
+    "patient_id": "90319791",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89863207",
+    "patient_id": "90320760",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89864093",
+    "patient_id": "90321856",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89864908",
+    "patient_id": "90323577",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89865938",
+    "patient_id": "90324451",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89866951",
+    "patient_id": "90325294",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89867951",
+    "patient_id": "90326126",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89868820",
+    "patient_id": "90327176",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89869702",
+    "patient_id": "90328257",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89870080",
+    "patient_id": "90329147",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89870955",
+    "patient_id": "90329719",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89871866",
+    "patient_id": "90330494",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89872651",
+    "patient_id": "90331328",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89873663",
+    "patient_id": "90332391",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89874134",
-    "gender": null,
-    "birth_date": null,
-    "family_name": "",
-    "given_name": ""
-  },
-  {
-    "patient_id": "89874353",
-    "gender": null,
-    "birth_date": null,
-    "family_name": "",
-    "given_name": ""
-  },
-  {
-    "patient_id": "89874575",
-    "gender": null,
-    "birth_date": null,
-    "family_name": "",
-    "given_name": ""
-  },
-  {
-    "patient_id": "89874689",
+    "patient_id": "90333737",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89874774",
-    "gender": null,
-    "birth_date": null,
-    "family_name": "",
-    "given_name": ""
-  },
-  {
-    "patient_id": "89874955",
-    "gender": null,
-    "birth_date": null,
-    "family_name": "",
-    "given_name": ""
-  },
-  {
-    "patient_id": "89875170",
-    "gender": null,
-    "birth_date": null,
-    "family_name": "",
-    "given_name": ""
-  },
-  {
-    "patient_id": "89875300",
-    "gender": null,
-    "birth_date": null,
-    "family_name": "",
-    "given_name": ""
-  },
-  {
-    "patient_id": "89875450",
-    "gender": null,
-    "birth_date": null,
-    "family_name": "",
-    "given_name": ""
-  },
-  {
-    "patient_id": "89875570",
+    "patient_id": "90334569",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89875650",
-    "gender": null,
-    "birth_date": null,
-    "family_name": "",
-    "given_name": ""
-  },
-  {
-    "patient_id": "89875798",
-    "gender": null,
-    "birth_date": null,
-    "family_name": "",
-    "given_name": ""
-  },
-  {
-    "patient_id": "89876047",
-    "gender": null,
-    "birth_date": null,
-    "family_name": "",
-    "given_name": ""
-  },
-  {
-    "patient_id": "89876205",
-    "gender": null,
-    "birth_date": null,
-    "family_name": "",
-    "given_name": ""
-  },
-  {
-    "patient_id": "89876434",
-    "gender": null,
-    "birth_date": null,
-    "family_name": "",
-    "given_name": ""
-  },
-  {
-    "patient_id": "89876545",
+    "patient_id": "90335483",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89876609",
-    "gender": "male",
-    "birth_date": "1962-04-18",
-    "family_name": "Volkov",
-    "given_name": "Nikolai Petrovich"
-  },
-  {
-    "patient_id": "89878557",
+    "patient_id": "90336293",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89879596",
+    "patient_id": "90337245",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89880498",
+    "patient_id": "90338338",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   },
   {
-    "patient_id": "89881306",
+    "patient_id": "90339220",
     "gender": "female",
     "birth_date": "1980-01-02",
-    "family_name": "",
-    "given_name": ""
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90340228",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90341311",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90342249",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90343225",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90344808",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90345603",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90346470",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90347335",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90348481",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90349593",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90350479",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90351553",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90352639",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90353694",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90354719",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90357894",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90358763",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90359838",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90360915",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90361847",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90362907",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90364047",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90365016",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90366083",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90368615",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90369505",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90370395",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90371365",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90372459",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90373297",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90374423",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90375522",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90376516",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90377657",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90379773",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90380521",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90381344",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
+  },
+  {
+    "patient_id": "90383503",
+    "gender": "female",
+    "birth_date": "1980-01-02",
+    "family_name": "Karla",
+    "given_name": "Nu\u00c3\u00b1ez"
   }
 ]

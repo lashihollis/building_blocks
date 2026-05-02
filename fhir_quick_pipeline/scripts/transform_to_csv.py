@@ -5,18 +5,18 @@ from datetime import datetime
 
 def transform_patients_to_csv():
     """Convert patients JSON to CSV"""
-    with open("data/raw/patients.json", "r") as f:
+    with open("fhir_quick_pipeline/data/raw/patients.json", "r") as f:
         patients = json.load(f)
     
     if not patients:
         print("⚠️ No patients data found")
         return None
     
-    os.makedirs("data/processed", exist_ok=True)
+    os.makedirs("fhir_quick_pipeline/data/processed", exist_ok=True)
     
     ingestion_date = datetime.now().isoformat()
     
-    with open("data/processed/patients.csv", "w", newline="") as f:
+    with open("fhir_quick_pipeline/data/processed/patients.csv", "w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=[
             "patient_id", "gender", "birth_date", 
             "family_name", "given_name", "source_system", "ingestion_date"
@@ -39,7 +39,7 @@ def transform_patients_to_csv():
 
 def transform_observations_to_csv():
     """Convert observations JSON to CSV"""
-    with open("data/raw/observations.json", "r") as f:
+    with open("fhir_quick_pipeline/data/raw/observations.json", "r") as f:
         observations = json.load(f)
     
     if not observations:
@@ -58,7 +58,7 @@ def transform_observations_to_csv():
         print("⚠️ No blood pressure observations found")
         return None
     
-    os.makedirs("data/processed", exist_ok=True)
+    os.makedirs("fhir_quick_pipeline/data/processed", exist_ok=True)
     
     ingestion_date = datetime.now().isoformat()
     vital_type_map = {
@@ -70,7 +70,7 @@ def transform_observations_to_csv():
         "8478-0": "BP_MEAN"                # Mean BP
     }
     
-    with open("data/processed/observations.csv", "w", newline="") as f:
+    with open("fhir_quick_pipeline/data/processed/observations.csv", "w", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=[
             "patient_id", "vital_date", "vital_type", 
             "vital_value", "vital_unit", "source_system", "ingestion_date"

@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  # Original seed data sources
+  - name: seeds
+    description: Original synthetic seed data
+    database: quality_measures
+    schema: main
+    tables:
+      - name: payer_data
+        description: Payer source data (highest trust)
+      - name: ehr_data
+        description: EHR source data (medium trust)      
+      - name: patient_reported_data
+        description: Patient-reported vitals data (lowest trust)
+      - name: dx_codes
+        description: Diagnosis code lookup table      
+      - name: source_priority
+        description: Source priority lookup

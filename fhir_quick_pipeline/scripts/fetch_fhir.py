@@ -3,54 +3,69 @@ import json
 import os
 import time
 
-def fetch_patients(base_url="https://hapi.fhir.org/baseR4", max_patients=100):
-    """Fetch patients from FHIR server"""
-    patients = []
-    url = f"{base_url}/Patient"
-    params = {"_count": min(max_patients, 20), "_offset": 0}
-    
-    while len(patients) < max_patients:
-        print(f"Fetching patients from {url}")
-        response = requests.get(url, params=params)
-        
-        if response.status_code != 200:
-            print(f"Error: {response.status_code}")
-            break
-            
-        data = response.json()
-        
-        # Extract patients from FHIR bundle
-        for entry in data.get("entry", []):
-            patient = entry.get("resource", {})
-            name = patient.get("name", [{}])[0]
-            patients.append({
-                "patient_id": patient.get("id"),
-                "gender": patient.get("gender"),
-                "birth_date": patient.get("birthDate"),
-                "family_name": name.get("family", ""),
-                "given_name": " ".join(name.get("given", []))
-            })
-        
-        # Pagination
-        next_link = None
-        for link in data.get("link", []):
-            if link.get("relation") == "next":
-                next_link = link.get("url")
-                break
-        
-        if not next_link or len(patients) >= max_patients:
-            break
-            
-        url = next_link
-        params = {}
-        time.sleep(0.5)
-    
-    return patients[:max_patients]
+# Constants for better maintainability
+BASE_URL = "https://hapi.fhir.org/baseR4"
+DATA_DIR = "fhir_quick_pipeline/data/raw"
 
-def fetch_observations_for_patient(patient_id, base_url="https://hapi.fhir.org/baseR4"):
-    """Fetch blood pressure observations for a specific patient"""
+###
+# HELPER: fetch_patients
+# Connects to the FHIR Patient endpoint and handles pagination logic.
+# It extracts key demographic details (ID, Gender, Name) from the JSON Bundle
+# and returns a list of simplified dictionaries.
+###
+def fetch_patients(max_patients=50):
+    patients = []
+    url = f"{BASE_URL}/Patient"
+    params = {"_count": min(max_patients, 100)}
+    
+    with requests.Session() as session:
+        while len(patients) < max_patients:
+            try:
+                response = session.get(url, params=params, timeout=10)
+                response.raise_for_status()
+                data = response.json()
+                
+                for entry in data.get("entry", []):
+                    resource = entry.get("resource", {})
+                    # Simplify name extraction
+                    names = resource.get("name", [{}])
+                    primary_name = names[0] if names else {}
+                    
+                    patients.append({
+                        "patient_id": resource.get("id"),
+                        "gender": resource.get("gender"),
+                        "birth_date": resource.get("birthDate"),
+                        "family_name": primary_name.get("family", ""),
+                        "given_name": " ".join(primary_name.get("given", []))
+                    })
+                    
+                    if len(patients) >= max_patients:
+                        break
+                
+                # Check for next page in FHIR Bundle links
+                next_link = next((link["url"] for link in data.get("link", []) if link["relation"] == "next"), None)
+                
+                if not next_link or len(patients) >= max_patients:
+                    break
+                    
+                url = next_link
+                params = {}  # Clear params as they are usually baked into the next_link URL
+                time.sleep(0.5)
+                
+            except requests.exceptions.RequestException as e:
+                print(f"❌ Error fetching patients: {e}")
+                break
+                
+    return patients
+
+###
+# HELPER: fetch_observations_for_patient
+# Targets specific LOINC codes (Systolic/Diastolic BP) for a single patient.
+# It filters for 'subject' ID and returns observation values with their units.
+###
+def fetch_observations_for_patient(session, patient_id):
     observations = []
-    url = f"{base_url}/Observation"
+    url = f"{BASE_URL}/Observation"
     
     # LOINC codes: 8480-6 = Systolic, 8462-4 = Diastolic
     params = {
@@ -60,58 +75,70 @@ def fetch_observations_for_patient(patient_id, base_url="https://hapi.fhir.org/b
     }
     
     try:
-        response = requests.get(url, params=params, timeout=10)
-        if response.status_code != 200:
-            return observations
-        
+        response = session.get(url, params=params, timeout=10)
+        response.raise_for_status()
         data = response.json()
         
         for entry in data.get("entry", []):
             obs = entry.get("resource", {})
-            value = obs.get("valueQuantity", {})
+            val_qty = obs.get("valueQuantity", {})
+            coding = obs.get("code", {}).get("coding", [{}])[0]
             
             observations.append({
                 "patient_id": patient_id,
                 "observation_id": obs.get("id"),
-                "loinc_code": obs.get("code", {}).get("coding", [{}])[0].get("code"),
-                "loinc_display": obs.get("code", {}).get("coding", [{}])[0].get("display"),
-                "value": value.get("value"),
-                "unit": value.get("unit"),
+                "loinc_code": coding.get("code"),
+                "loinc_display": coding.get("display"),
+                "value": val_qty.get("value"),
+                "unit": val_qty.get("unit"),
                 "date": obs.get("effectiveDateTime", ""),
                 "status": obs.get("status")
             })
     except Exception as e:
-        print(f"Error fetching observations for {patient_id}: {e}")
+        print(f"⚠️ Could not fetch observations for {patient_id}: {e}")
     
-    time.sleep(0.3)
     return observations
 
+###
+# HELPER: save_to_json
+# A utility function to ensure the directory exists and write the list
+# of data objects to a formatted JSON file.
+###
 def save_to_json(data, filename):
-    """Save data to JSON file"""
-    os.makedirs("data/raw", exist_ok=True)
-    with open(f"data/raw/{filename}", "w") as f:
+    os.makedirs(DATA_DIR, exist_ok=True)
+    filepath = os.path.join(DATA_DIR, filename)
+    with open(filepath, "w") as f:
         json.dump(data, f, indent=2)
-    print(f"Saved to data/raw/{filename}")
+    print(f"💾 Data successfully saved to {filepath}")
 
+###
+# MAIN: fetch_all_data
+# The orchestrator function. It first pulls the patient list, then loops
+# through each patient to grab their specific clinical observations.
+###
 def fetch_all_data(max_patients=100):
-    """Main function to fetch all data"""
-    print(f"\n{'='*50}")
-    print("Starting FHIR Data Fetch")
-    print(f"{'='*50}\n")
+    print(f"\n{'='*40}")
+    print("🚀 INITIATING FHIR PIPELINE")
+    print(f"\n{'='*40}\n")
     
-    print(f"Fetching {max_patients} patients...")
+    # Get Patients
     patients = fetch_patients(max_patients=max_patients)
-    print(f"✅ Fetched {len(patients)} patients")
-    
+    print(f"✅ Extracted {len(patients)} patients.")
     save_to_json(patients, "patients.json")
     
+    # Get Observations using a shared Session
     all_observations = []
-    for i, patient in enumerate(patients):
-        print(f"Fetching observations for patient {i+1}/{len(patients)}: {patient['patient_id']}")
-        obs = fetch_observations_for_patient(patient['patient_id'])
-        all_observations.extend(obs)
+    with requests.Session() as session:
+        for i, pt in enumerate(patients, 1):
+            pid = pt['patient_id']
+            if not pid: continue
+            
+            print(f"🔄 [{i}/{len(patients)}] Fetching vitals for: {pid}")
+            obs_list = fetch_observations_for_patient(session, pid)
+            all_observations.extend(obs_list)
+            time.sleep(0.2) # Polite rate limiting
     
-    print(f"\n✅ Fetched {len(all_observations)} total observations")
+    print(f"\n✅ Total Observations Collected: {len(all_observations)}")
     save_to_json(all_observations, "observations.json")
     
     return patients, all_observations
