@@ -1,5 +1,5 @@
 # FHIR API Data Pipeline
-*(data_engineering_projects/fhir_quick_pipeline)*
+*(fhir_quick_pipeline)*
 ---
 
 ## Purpose
