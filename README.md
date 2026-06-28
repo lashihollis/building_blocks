@@ -12,4 +12,4 @@ This repository showcases a collection of projects developed throughout my conti
 The goal of this repository is to demonstrate technical proficiency, problem-solving skills, and growth across a range of data-focused disciplines.
 
 ## Ongoing Development
-This portfolio is actively maintained and will continue to expand with new projects, improvements, and deeper explorations into data engineering concepts.
+This portfolio is actively maintained and will continue to expand with new projects, improvements, and deeper explorations into multiple data concepts.
