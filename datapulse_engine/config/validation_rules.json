@@ -1,0 +1,27 @@
+{
+  "expected_columns": [
+    "encounter_id",
+    "patient_id",
+    "plan_id",
+    "department_id",
+    "billing_amount",
+    "encounter_date"
+  ],
+  "required_fields": [
+    "encounter_id",
+    "patient_id",
+    "department_id"
+  ],
+  "data_types": {
+    "encounter_id": "str",
+    "patient_id": "str",
+    "plan_id": "str",
+    "department_id": "str",
+    "billing_amount": "float",
+    "encounter_date": "str"
+  },
+  "rules": {
+    "min_billing_amount": 0.0,
+    "allow_null_plan_id": false
+  }
+}
