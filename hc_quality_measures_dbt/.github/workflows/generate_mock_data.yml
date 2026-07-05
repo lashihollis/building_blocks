@@ -1,0 +1,45 @@
+name: Refresh Mock Healthcare Data
+
+on:
+  schedule:
+    # Runs at 00:00 UTC every Sunday (Adjust as needed for your project)
+    - cron: '0 0 * * 0'
+  workflow_dispatch: # Allows you to trigger this manually from the GitHub UI
+
+jobs:
+  refresh-data:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+        cache: 'pip' # Speeds up subsequent runs
+
+    - name: Install dependencies
+      run: |
+        pip install pandas numpy
+
+    - name: Run data generator script
+      run: |
+        python hc_quality_measures_dbt/generate_data.py
+
+    - name: Commit and push updated source files
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        
+        # Stage the generated CSV files
+        git add seed_patients.csv source_*.csv
+        
+        # Only commit and push if the data actually changed
+        if ! git diff-index --quiet HEAD; then
+          git commit -m "chore: auto-refresh mock healthcare source data"
+          git push
+        else
+          echo "No changes detected in mock data. Skipping push."
+        fi
