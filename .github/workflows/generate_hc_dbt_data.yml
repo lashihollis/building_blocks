@@ -24,6 +24,7 @@ jobs:
         pip install pandas numpy
 
     - name: Run data generator script
+      working-directory: hc_quality_measures_dbt # <--- Tells GitHub to step into this folder first
       run: |
         python generate_data.py
 
