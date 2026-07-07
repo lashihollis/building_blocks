@@ -34,7 +34,7 @@ jobs:
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
         
         # Stage the exact output files from the root directory
-        git add seed_patients.csv source_*.csv
+        git add hc_quality_measures_dbt/seeds/seed_patients.csv source_*.csv
         
         # Only commit and push if the data actually changed
         if ! git diff-index --quiet HEAD; then
