@@ -2,9 +2,8 @@ name: Refresh Mock Healthcare Data
 
 on:
   schedule:
-    # Runs at 00:00 UTC every Sunday (Adjust as needed for your project)
     - cron: '0 0 * * 0'
-  workflow_dispatch: # Allows you to trigger this manually from the GitHub UI
+  workflow_dispatch:
 
 jobs:
   refresh-data:
@@ -18,15 +17,16 @@ jobs:
       uses: actions/setup-python@v5
       with:
         python-version: '3.10'
-        cache: 'pip' # Speeds up subsequent runs
+        cache: 'pip'
 
     - name: Install dependencies
       run: |
         pip install pandas numpy
 
     - name: Run data generator script
+      working-directory: ./hc_quality_measures_dbt
       run: |
-        python hc_quality_measures_dbt/generate_data.py
+        python generate_data.py
 
     - name: Commit and push updated source files
       run: |
@@ -34,11 +34,11 @@ jobs:
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
         git rm --ignore-unmatch -f \
-          seed_patients.csv \
-          seed_payer_claims.csv \
-          source_ehr_conditions.csv \
-          source_ehr_vitals.csv \
-          source_patient_reported_vitals.csv || true
+          hc_quality_measures_dbt/seeds/seed_patients.csv \
+          hc_quality_measures_dbt/seeds/seed_payer_claims.csv \
+          hc_quality_measures_dbt/seeds/source_ehr_conditions.csv \
+          hc_quality_measures_dbt/seeds/source_ehr_vitals.csv \
+          hc_quality_measures_dbt/seeds/source_patient_reported_vitals.csv || true
 
         git add \
           hc_quality_measures_dbt/seeds/seed_patients.csv \
