@@ -5,6 +5,9 @@ on:
     - cron: '0 0 * * 0'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   refresh-data:
     runs-on: ubuntu-latest
@@ -52,7 +55,7 @@ jobs:
 
         if ! git diff --cached --quiet; then
           git commit -m "chore: auto-refresh mock healthcare source data"
-          git push
+          git push origin HEAD:${GITHUB_REF_NAME}
         else
           echo "No changes detected in mock data. Skipping push."
         fi
