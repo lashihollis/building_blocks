@@ -32,12 +32,25 @@ jobs:
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        
-        # Stage the generated CSV files
-        git add seed_patients.csv source_*.csv
-        
-        # Only commit and push if the data actually changed
-        if ! git diff-index --quiet HEAD; then
+
+        git rm --ignore-unmatch -f \
+          seed_patients.csv \
+          seed_payer_claims.csv \
+          source_ehr_conditions.csv \
+          source_ehr_vitals.csv \
+          source_patient_reported_vitals.csv || true
+
+        git add \
+          hc_quality_measures_dbt/seeds/seed_patients.csv \
+          hc_quality_measures_dbt/seeds/payer_data.csv \
+          hc_quality_measures_dbt/seeds/ehr_data.csv \
+          hc_quality_measures_dbt/seeds/patient_reported_data.csv \
+          hc_quality_measures_dbt/seeds/source_payer_claims.csv \
+          hc_quality_measures_dbt/seeds/source_ehr_conditions.csv \
+          hc_quality_measures_dbt/seeds/source_ehr_vitals.csv \
+          hc_quality_measures_dbt/seeds/source_patient_reported_vitals.csv
+
+        if ! git diff --cached --quiet; then
           git commit -m "chore: auto-refresh mock healthcare source data"
           git push
         else

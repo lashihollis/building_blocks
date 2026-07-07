@@ -43,3 +43,32 @@ seeds:
         tests:
           - accepted_values:
               values: ['high', 'medium', 'medium_low', 'low']
+
+  - name: seed_patients
+    description: Master patient demographic seed generated for downstream healthcare measures.
+    columns:
+      - name: patient_id
+        tests:
+          - unique
+          - not_null
+
+  - name: payer_data
+    description: Payer seed data used by the payer staging models for diagnoses and vitals.
+    columns:
+      - name: patient_id
+        tests:
+          - not_null
+
+  - name: ehr_data
+    description: EHR seed data used by the EHR staging models for diagnoses and vitals.
+    columns:
+      - name: patient_id
+        tests:
+          - not_null
+
+  - name: patient_reported_data
+    description: Patient-reported seed data used by the patient-reported staging models.
+    columns:
+      - name: patient_id
+        tests:
+          - not_null
