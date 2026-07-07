@@ -24,7 +24,7 @@ jobs:
         pip install pandas numpy
 
     - name: Run data generator script
-      working-directory: hc_quality_measures_dbt # <--- Tells GitHub to step into this folder first
+      working-directory: hc_quality_measures_dbt
       run: |
         python generate_data.py
 
@@ -33,13 +33,14 @@ jobs:
         git config --global user.name "github-actions[bot]"
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
         
-        # Stage the exact output files from the root directory
+        # Stage the files
         git add hc_quality_measures_dbt/seeds/seed_patients.csv hc_quality_measures_dbt/seeds/source_*.csv
         
-        # Only commit and push if the data actually changed
+        # Check if there are staged changes to commit
         if ! git diff-index --quiet HEAD; then
           git commit -m "chore: auto-refresh mock healthcare source data"
           git push origin HEAD:${{ github.ref_name }}
         else
           echo "No changes detected in mock data. Skipping push."
+          exit 0 # <--- This ensures the pipeline marks itself as a SUCCESS when there's nothing new
         fi
