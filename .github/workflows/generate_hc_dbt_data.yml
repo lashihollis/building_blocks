@@ -3,10 +3,7 @@ name: Refresh Mock Healthcare Data
 on:
   schedule:
     - cron: '0 0 * * 0'
-  workflow_dispatch:
-
-permissions:
-  contents: write
+  workflow_dispatch: # Allows you to trigger this manually from the GitHub UI
 
 jobs:
   refresh-data:
@@ -27,7 +24,6 @@ jobs:
         pip install pandas numpy
 
     - name: Run data generator script
-      working-directory: ./hc_quality_measures_dbt
       run: |
         python generate_data.py
 
@@ -35,27 +31,14 @@ jobs:
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-        git rm --ignore-unmatch -f \
-          hc_quality_measures_dbt/seeds/seed_patients.csv \
-          hc_quality_measures_dbt/seeds/seed_payer_claims.csv \
-          hc_quality_measures_dbt/seeds/source_ehr_conditions.csv \
-          hc_quality_measures_dbt/seeds/source_ehr_vitals.csv \
-          hc_quality_measures_dbt/seeds/source_patient_reported_vitals.csv || true
-
-        git add \
-          hc_quality_measures_dbt/seeds/seed_patients.csv \
-          hc_quality_measures_dbt/seeds/payer_data.csv \
-          hc_quality_measures_dbt/seeds/ehr_data.csv \
-          hc_quality_measures_dbt/seeds/patient_reported_data.csv \
-          hc_quality_measures_dbt/seeds/source_payer_claims.csv \
-          hc_quality_measures_dbt/seeds/source_ehr_conditions.csv \
-          hc_quality_measures_dbt/seeds/source_ehr_vitals.csv \
-          hc_quality_measures_dbt/seeds/source_patient_reported_vitals.csv
-
-        if ! git diff --cached --quiet; then
+        
+        # Stage the exact output files from the root directory
+        git add seed_patients.csv source_*.csv
+        
+        # Only commit and push if the data actually changed
+        if ! git diff-index --quiet HEAD; then
           git commit -m "chore: auto-refresh mock healthcare source data"
-          git push origin HEAD:${GITHUB_REF_NAME}
+          git push origin HEAD:${{ github.ref_name }}
         else
           echo "No changes detected in mock data. Skipping push."
         fi
