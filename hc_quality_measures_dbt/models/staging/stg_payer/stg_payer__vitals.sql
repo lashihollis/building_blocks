@@ -6,5 +6,5 @@ select
     vital_value,
     vital_unit,
     'payer' as source_system
-from "quality_measures"."main"."payer_data"
+from {{ ref('payer_data') }}
 where vital_type is not null

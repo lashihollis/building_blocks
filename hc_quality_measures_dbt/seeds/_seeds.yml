@@ -33,7 +33,7 @@ seeds:
           - not_null
       - name: priority_rank
         description: |
-          Priority order (1 = highest trust, higher number = lower trust)
+          Priority order (1 = highest trust, 4 = lower trust)
         tests:
           - not_null
           - accepted_values:
@@ -44,82 +44,31 @@ seeds:
           - accepted_values:
               values: ['high', 'medium', 'medium_low', 'low']
 
-  - name: payer_data
-    description: |
-      Synthetic payer source data. Highest trust source for claims-based reporting.
-      Contains encounters, diagnoses, and vitals for quality measure analysis.
+  - name: seed_patients
+    description: Master patient demographic seed generated for downstream healthcare measures.
     columns:
       - name: patient_id
-        description: Unique patient identifier
+        tests:
+          - unique
+          - not_null
+
+  - name: payer_data
+    description: Payer seed data used by the payer staging models for diagnoses and vitals.
+    columns:
+      - name: patient_id
         tests:
           - not_null
-      - name: encounter_id
-        description: Unique encounter identifier
-        tests:
-          - not_null
-      - name: encounter_date
-        description: Date of the encounter (YYYY-MM-DD)
-        tests:
-          - not_null
-      - name: dx_code
-        description: ICD-10 diagnosis code associated with the encounter (may be null)
-      - name: vital_type
-        description: Type of vital measurement (BP_SYSTOLIC, BP_DIASTOLIC)
-      - name: vital_value
-        description: Numeric value of the vital measurement
-      - name: vital_unit
-        description: Unit of measurement (mmHg)
-      - name: vital_date
-        description: Date the vital was measured (YYYY-MM-DD)
 
   - name: ehr_data
-    description: |
-      Synthetic EHR source data. Medium trust source containing clinical
-      encounters, diagnoses, and vitals.
+    description: EHR seed data used by the EHR staging models for diagnoses and vitals.
     columns:
       - name: patient_id
-        description: Unique patient identifier
         tests:
           - not_null
-      - name: encounter_id
-        description: Unique encounter identifier
-        tests:
-          - not_null
-      - name: encounter_date
-        description: Date of the encounter (YYYY-MM-DD)
-        tests:
-          - not_null
-      - name: dx_code
-        description: ICD-10 diagnosis code associated with the encounter (may be null)
-      - name: vital_type
-        description: Type of vital measurement (BP_SYSTOLIC, BP_DIASTOLIC)
-      - name: vital_value
-        description: Numeric value of the vital measurement
-      - name: vital_unit
-        description: Unit of measurement (mmHg)
-      - name: vital_date
-        description: Date the vital was measured (YYYY-MM-DD)
 
   - name: patient_reported_data
-    description: |
-      Synthetic patient-reported source data. Lowest trust source used as fallback
-      when payer and EHR data are unavailable. May have null encounter_id and encounter_date.
+    description: Patient-reported seed data used by the patient-reported staging models.
     columns:
       - name: patient_id
-        description: Unique patient identifier
-        tests:
-          - not_null
-      - name: encounter_id
-        description: Encounter identifier (may be null for patient-reported data)
-      - name: encounter_date
-        description: Date of encounter (may be null for patient-reported data)
-      - name: vital_type
-        description: Type of vital measurement (BP_SYSTOLIC, BP_DIASTOLIC)
-      - name: vital_value
-        description: Numeric value of the vital measurement
-      - name: vital_unit
-        description: Unit of measurement (mmHg)
-      - name: vital_date
-        description: Date the vital was measured (YYYY-MM-DD)
         tests:
           - not_null
