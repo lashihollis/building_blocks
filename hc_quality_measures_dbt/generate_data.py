@@ -10,7 +10,7 @@ np.random.seed(42)
 random.seed(42)
 
 NUM_PATIENTS = 200
-END_DATE = datetime(2026, 7, 1)
+END_DATE = datetime.now().replace(hour=0, minute=0, second=0, microsecond=0)
 START_DATE = END_DATE - timedelta(days=365)
 PROJECT_DIR = Path(__file__).resolve().parent
 SEEDS_DIR = PROJECT_DIR / "seeds"
