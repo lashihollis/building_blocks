@@ -37,7 +37,7 @@ jobs:
         git add hc_quality_measures_dbt/seeds/seed_patients.csv hc_quality_measures_dbt/seeds/source_*.csv
         
         # Check if there are staged changes to commit
-        if ! git diff-index --quiet HEAD; then
+        if ! git diff --cached --quiet; then
           git commit -m "chore: auto-refresh mock healthcare source data"
           git push origin HEAD:${{ github.ref_name }}
         else
