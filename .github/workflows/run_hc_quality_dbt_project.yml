@@ -34,6 +34,14 @@ jobs:
       run: |
         pip install dbt-duckdb
 
+    - name: Debug profiles
+      working-directory: hc_quality_measures_dbt
+      run: |
+        pwd
+        ls -la
+        echo "--- profiles.yml content ---"
+        cat -A profiles.yml
+
     - name: Run dbt build
       working-directory: hc_quality_measures_dbt
       env:
@@ -50,9 +58,4 @@ jobs:
         git config --global user.name "github-actions[bot]"
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
         echo "Target branch: $TARGET_BRANCH"
-        git add hc_quality_measures_dbt/quality_measures.duckdb
-        git diff --cached --quiet && echo "No changes to commit." && exit 0
-        git commit -m "chore: rebuild dbt models after data refresh"
-        git fetch origin "$TARGET_BRANCH"
-        git rebase "origin/$TARGET_BRANCH"
-        git push origin HEAD:"$TARGET_BRANCH"
+        git add hc_quality_measures_dbt/quality_measures
