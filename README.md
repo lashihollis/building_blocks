@@ -1,15 +1,34 @@
 # 🧱 Building Blocks
 
-## Overview
-This repository showcases a collection of projects developed throughout my continuous learning journey in data and analytics engineering. It highlights my hands-on experience building solutions and exploring new tools and concepts.
+A collection of projects showcasing hands-on work across data analytics, data engineering, and software fundamentals — built while continuously learning and leveling up technical skills.
 
-## Contents
-- **Python Projects** – Data processing, automation, and pipeline development  
-- **SQL Projects** – Data modeling, transformations, and analysis  
-- **Case Studies** – End-to-end breakdowns of technical projects, including design decisions and outcomes  
+## 📂 Contents
 
-## Purpose
-The goal of this repository is to demonstrate technical proficiency, problem-solving skills, and growth across a range of data-focused disciplines.
+| Folder | What's inside |
+|---|---|
+| [`case_studies`](./case_studies) | End-to-end breakdowns of technical projects — problem framing, design decisions, and outcomes |
+| [`data_science_projects`](./data_science_projects) | Data science and analysis work, including exploratory notebooks and modeling |
+| [`hc_quality_measures_dbt`](./hc_quality_measures_dbt) | Healthcare quality measures implemented with dbt — data modeling and transformation pipelines |
+| [`python_practice`](./python_practice) | Python exercises covering data processing, automation, and scripting fundamentals |
+| [`sql_practice`](./sql_practice) | SQL exercises in data modeling, transformations, and analytical querying |
+| [`.github/workflows`](./.github/workflows) | CI automation for the repo |
 
-## Ongoing Development
-This portfolio is actively maintained and will continue to expand with new projects, improvements, and deeper explorations into data engineering concepts.
+## 🎯 Purpose
+
+This repo exists to demonstrate technical proficiency and problem-solving across data-focused disciplines — from raw SQL and Python fundamentals to applied data science and production-style dbt pipelines.
+
+## 🛠️ Tech Stack
+
+- **Python** — scripting, automation, data processing
+- **SQL** — querying, modeling, transformations
+- **dbt** — analytics engineering / data transformation pipelines
+- **Jupyter Notebooks** — exploratory data analysis
+- **GitHub Actions** — CI/CD workflows
+
+## 🚧 Status
+
+Actively maintained — new projects and deeper dives into data engineering concepts are added on an ongoing basis.
+
+## 📫 Contact
+
+Feel free to explore the folders above or reach out with questions about any of the projects.
