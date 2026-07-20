@@ -52,7 +52,7 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           echo "Target branch: $TARGET_BRANCH"
-          git add -A
+          git add hc_quality_measures_dbt/quality_measures.duckdb
           git diff --cached --quiet && echo "No changes to commit." && exit 0
           git commit -m "chore: rebuild dbt models after data refresh"
           git fetch origin "$TARGET_BRANCH"
