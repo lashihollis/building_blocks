@@ -4,7 +4,9 @@ dbt_packages/
 dbt_modules/
 logs/
 
-# Packages lock file
+# Local dbt/runtime artifacts
+*.duckdb
+.user.yml
 package-lock.yml
 
 # Credentials and secrets
@@ -12,8 +14,15 @@ package-lock.yml
 
 # Python/Environment
 __pycache__/
+*.py[cod]
+*.pyo
+.venv/
 venv/
 hc_quality_measures_dbt/venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.ipynb_checkpoints/
 
 # OS specific
 .DS_Store
