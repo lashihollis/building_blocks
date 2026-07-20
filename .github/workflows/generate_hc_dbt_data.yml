@@ -54,3 +54,4 @@ jobs:
 
           # Sync with remote before pushing to avoid non-fast-forward rejection
           git fetch origin "$TARGET_BRANCH"
+        fi
