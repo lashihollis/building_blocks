@@ -1,17 +1,21 @@
 name: Refresh Mock Healthcare Data
-
 on:
   schedule:
     - cron: '0 23 * * 4'
-  workflow_dispatch: # Allows you to trigger this manually from the GitHub UI
-
+  workflow_dispatch:
+    inputs:
+      target_branch:
+        description: 'Branch to push generated data to (defaults to main)'
+        required: false
+        default: 'main'
 permissions:
   contents: write
-
+concurrency:
+  group: refresh-mock-data
+  cancel-in-progress: false
 jobs:
   refresh-data:
     runs-on: ubuntu-latest
-
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
@@ -34,19 +38,19 @@ jobs:
     - name: Commit and push updated source files
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        
+        TARGET_BRANCH: ${{ github.event.inputs.target_branch || 'main' }}
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        
+
+        echo "Target branch: $TARGET_BRANCH"
+
         # Stage the files
         git add hc_quality_measures_dbt/seeds/seed_patients.csv hc_quality_measures_dbt/seeds/source_*.csv
-        
+
         # Check if there are staged changes to commit
         if ! git diff --cached --quiet; then
           git commit -m "chore: auto-refresh mock healthcare source data"
-          git push origin HEAD:main
-        else
-          echo "No changes detected in mock data. Skipping push."
-          exit 0 # <--- This ensures the pipeline marks itself as a SUCCESS when there's nothing new
-        fi
+
+          # Sync with remote before pushing to avoid non-fast-forward rejection
+          git fetch origin "$TARGET_BRANCH"
