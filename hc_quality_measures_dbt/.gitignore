@@ -14,6 +14,7 @@ profiles.yml
 # Python/Environment
 __pycache__/
 venv/
+hc_quality_measures_dbt/venv/
 
 # OS specific
 .DS_Store
