@@ -1,0 +1,58 @@
+name: Run dbt Build (DuckDB)
+on:
+  workflow_run:
+    workflows: ["Refresh Mock Healthcare Data"]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      target_branch:
+        description: 'Branch to run against / push results to'
+        required: false
+        default: 'main'
+permissions:
+  contents: write
+concurrency:
+  group: dbt-build
+  cancel-in-progress: false
+jobs:
+  dbt-build:
+    if: github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        ref: ${{ github.event.inputs.target_branch || github.event.workflow_run.head_branch || 'main' }}
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+        cache: 'pip'
+
+    - name: Install dbt-duckdb
+      run: |
+        pip install dbt-duckdb
+
+    - name: Run dbt build
+      working-directory: hc_quality_measures_dbt
+      env:
+        DBT_PROFILES_DIR: .
+      run: |
+        dbt deps
+        dbt build
+
+    - name: Commit and push updated DuckDB file
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        TARGET_BRANCH: ${{ github.event.inputs.target_branch || github.event.workflow_run.head_branch || 'main' }}
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        echo "Target branch: $TARGET_BRANCH"
+        git add hc_quality_measures_dbt/quality_measures.duckdb
+        git diff --cached --quiet && echo "No changes to commit." && exit 0
+        git commit -m "chore: rebuild dbt models after data refresh"
+        git fetch origin "$TARGET_BRANCH"
+        git rebase "origin/$TARGET_BRANCH"
+        git push origin HEAD:"$TARGET_BRANCH"
