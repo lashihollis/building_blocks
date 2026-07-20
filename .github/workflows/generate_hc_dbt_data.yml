@@ -42,7 +42,7 @@ jobs:
         # Check if there are staged changes to commit
         if ! git diff --cached --quiet; then
           git commit -m "chore: auto-refresh mock healthcare source data"
-          git push origin HEAD:${{ github.ref_name }}
+          git push origin HEAD:main
         else
           echo "No changes detected in mock data. Skipping push."
           exit 0 # <--- This ensures the pipeline marks itself as a SUCCESS when there's nothing new
