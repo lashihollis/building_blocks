@@ -1,0 +1,8 @@
+hc_quality_measures_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: 'hc_quality_measures_dbt/quality_measures.duckdb'
+      threads: 1
+      timeout_seconds: 300
