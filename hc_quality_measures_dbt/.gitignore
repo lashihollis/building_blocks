@@ -8,7 +8,6 @@ logs/
 package-lock.yml
 
 # Credentials and secrets
-profiles.yml
 .env
 
 # Python/Environment
