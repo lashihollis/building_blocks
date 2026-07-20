@@ -56,5 +56,4 @@ jobs:
           git diff --cached --quiet && echo "No changes to commit." && exit 0
           git commit -m "chore: rebuild dbt models after data refresh"
           git fetch origin "$TARGET_BRANCH"
-          git rebase "origin/$TARGET_BRANCH"
           git push origin HEAD:"$TARGET_BRANCH"
