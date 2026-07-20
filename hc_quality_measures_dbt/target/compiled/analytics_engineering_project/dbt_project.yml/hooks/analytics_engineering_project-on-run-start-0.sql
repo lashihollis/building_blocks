@@ -1,1 +1,0 @@
-ATTACH 'fhir_data.duckdb' AS fhir_data
