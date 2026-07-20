@@ -53,6 +53,8 @@ jobs:
         git add hc_quality_measures_dbt/quality_measures.duckdb
         git diff --cached --quiet && echo "No changes to commit." && exit 0
         git commit -m "chore: rebuild dbt models after data refresh"
+        echo "--- Status after commit ---"
+        git status
         git fetch origin "$TARGET_BRANCH"
         git rebase "origin/$TARGET_BRANCH"
         git push origin HEAD:"$TARGET_BRANCH"
