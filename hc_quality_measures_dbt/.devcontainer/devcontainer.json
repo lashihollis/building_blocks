@@ -1,0 +1,15 @@
+{
+  "name": "hc_quality_measures_dbt",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "workspaceFolder": "/workspace/hc_quality_measures_dbt",
+  "settings": {
+    "python.defaultInterpreterPath": "/usr/local/bin/python"
+  },
+  "extensions": [
+    "ms-python.python"
+  ],
+  "postCreateCommand": "dbt deps",
+  "remoteUser": "root"
+}
