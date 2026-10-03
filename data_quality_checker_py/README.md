@@ -132,6 +132,7 @@ Contains:
 ### `visualize_results.py`
 
 Imports the framework results and uses Matplotlib to visualize failure counts by check.
+![Data Quality Check Results](data_quality_results.png)
 
 
 ### `README.md`

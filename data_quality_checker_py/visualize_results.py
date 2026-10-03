@@ -15,6 +15,7 @@ plt.bar(check_names, failure_counts)
 plt.title("Data Quality Check Results")
 plt.xlabel("Data Quality Check")
 plt.ylabel("Amount of Errors")
-plt.xticks(rotation=45)
-
+plt.xticks(rotation=20)
+plt.savefig("data_quality_results.png", bbox_inches="tight")
 plt.show()
+
