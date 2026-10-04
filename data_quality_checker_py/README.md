@@ -112,10 +112,11 @@ Keeping visualization separate from the framework allows the data quality classe
 ## Project Structure
 
 ```text
-data-quality-framework/
+data_quality_checker_py/
 │
-├── data_quality.py
+├── dataqualitycheck.py
 ├── visualize_results.py
+├── data_quality_results.png
 └── README.md
 ```
 
