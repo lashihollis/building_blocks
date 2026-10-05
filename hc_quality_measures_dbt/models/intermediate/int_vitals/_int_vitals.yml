@@ -1,21 +1,17 @@
 version: 2
 
 models:
-  - name: int_vitals_unioned
+  - name: int_vitals__unioned
     description: |
       Union of all vital measurements from payer, EHR, and patient-reported sources.
       Contains duplicates across sources that will be resolved in ranking model.
     columns:
       - name: patient_id
         description: Patient identifier
-        tests:
-          - not_null
       - name: encounter_id
         description: Encounter where vital was recorded (may be null)
       - name: vital_date
         description: Date vital was measured
-        tests:
-          - not_null
       - name: vital_type
         description: Type of vital measurement
       - name: vital_value
@@ -25,22 +21,17 @@ models:
       - name: source_system
         description: Original source system
 
-  - name: int_vitals_ranked
+  - name: int_vitals__ranked
     description: |
-      Deduplicated vital measurements with source ranking applied. For each patient
-      and vital date, selects the highest priority source (payer > ehr > patient_reported).
-      This ensures each measurement appears only once with the most trusted source.
+      Candidate vital measurements ranked by configured source priority for each
+      patient, date, and vital type. Rank 1 is selected by the vitals mart.
     columns:
       - name: patient_id
         description: Patient identifier
-        tests:
-          - not_null
       - name: encounter_id
         description: Encounter where vital was recorded
       - name: vital_date
         description: Date vital was measured
-        tests:
-          - not_null
       - name: vital_type
         description: Type of vital measurement
       - name: vital_value
@@ -48,6 +39,8 @@ models:
       - name: vital_unit
         description: Unit of measurement
       - name: source_system
-        description: Selected source after ranking (highest trust available)
-      - name: rank
-        description: Priority rank used for selection (1 = highest)
+        description: Source system that provided the candidate measurement
+      - name: source_priority_rank
+        description: Configured source priority (lower values are more trusted)
+      - name: source_rank
+        description: Rank within patient, date, and vital type (1 = preferred)

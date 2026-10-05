@@ -5,7 +5,7 @@ Project Overview
 ----------------
 This project demonstrates a scalable approach to modeling healthcare lab and vital data for quality measure reporting. Using dbt and DuckDB, I simulate data from three sources (payer, EHR, patient-reported), apply source ranking based on trustworthiness, and answer a real business question:
 
-What percentage of patients with a hypertension diagnosis have had a blood pressure reading within the last six months?
+What percentage of patients with a hypertension diagnosis have had a blood pressure measurement within the prior six calendar months?
 
 This project showcases:
 -----------------------
@@ -24,7 +24,7 @@ Answering this requires:
 ------------------------
     1.Identifying patients with a hypertension diagnosis
     2.Finding their most recent blood pressure reading
-    3.Determining if that reading occurred within the last 180 days
+    3.Determining if that reading occurred within the six calendar months through the measure's as-of date
 
 Data often comes from multiple sources with varying levels of trust:
 --------------------------------------------------------------------

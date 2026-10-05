@@ -1,7 +1,6 @@
-# Requirements for hc_quality_measures_dbt
-# Python 3.10+
-# Install with: pip install -r requirements.txt
+# Runtime dependencies for hc_quality_measures_dbt.
+# Install from the project directory with: python -m pip install -r requirements.txt
 
 dbt-duckdb>=1.8,<1.9
-pandas
-numpy
+pandas>=2.0,<3.0
+numpy>=1.24,<3.0

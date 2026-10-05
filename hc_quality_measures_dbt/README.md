@@ -1,6 +1,8 @@
 # Healthcare Quality Measures dbt Project
 
-This project builds a small healthcare analytics workflow with dbt and DuckDB. It generates mock clinical data, loads it into DuckDB, and runs a set of staging, intermediate, and mart models to calculate a hypertension quality-measure result.
+This project builds a small healthcare analytics workflow with dbt and DuckDB. It generates mock clinical data, loads it into DuckDB, and runs staging, intermediate, and mart models to calculate a hypertension quality-measure result. Vital-source precedence is configured in the `source_priority` seed; the vitals mart keeps one preferred source per patient, measurement date, and vital type.
+
+The hypertension mart reports one row per patient with a hypertension diagnosis and marks a patient compliant when at least one systolic or diastolic blood-pressure component was recorded in the six calendar months through `measure_as_of_date`. The as-of date is recorded in the output, and future-dated vitals are excluded.
 
 ## What you need
 
@@ -25,16 +27,14 @@ source .venv/bin/activate
 pip install --upgrade pip
 ```
 
-## 3. Install the required Python packages
+## 3. Install the project dependencies
 
 ```bash
-pip install 'dbt-duckdb>=1.8,<1.9' pandas numpy
+python -m pip install -r requirements.txt
 ```
 
-This installs:
-- dbt Core
-- the DuckDB adapter for dbt
-- pandas and numpy used by the data generation script
+The requirements file installs dbt Core, the DuckDB adapter, and the pandas and
+numpy dependencies used by the data generator.
 
 ## 4. Install dbt packages declared by the project
 
@@ -59,14 +59,27 @@ This writes the seed CSVs used by the dbt project into the seeds folder.
 ## 6. Load the seed data and build the models
 
 ```bash
-dbt seed --profiles-dir .
 dbt build --profiles-dir .
 ```
 
-These commands will:
+This command will:
 - load the seed data into DuckDB
 - create the dbt models and views
-- run the data tests defined in the project
+- run the data tests defined for the input sources and critical mart outputs
+
+## Data quality tests
+
+Tests are concentrated at the input boundary: external source CSVs are checked in
+`models/sources.yml`, while the `payer_data`, `ehr_data`, `patient_reported_data`,
+`seed_patients`, and lookup seeds are checked in `seeds/_seeds.yml`. This catches
+missing IDs, invalid vital values, and references to unknown patients, diagnosis
+codes, or source systems before downstream models consume the data.
+
+Staging and intermediate models are simple renames, filters, and unions, so
+repeating the same null, accepted-value, and relationship tests on every layer
+adds runtime without much additional protection. The marts retain focused checks
+for their output grain and the hypertension compliance calculation because those
+are important reporting contracts rather than repeated input checks.
 
 ## 7. Optional: generate and serve dbt docs
 
@@ -109,7 +122,7 @@ Calculate the clinical compliance percentage for the hypertension cohort:
 SELECT 
     COUNT(*) as total_patients,
     SUM(compliant) as compliant_patients,
-    ROUND(100.0 * SUM(compliant) / COUNT(*), 2) as compliance_percentage
+    ROUND(100.0 * SUM(compliant) / NULLIF(COUNT(*), 0), 2) as compliance_percentage
 FROM mrt_quality_measure__hypertension;
 ```
 
@@ -150,10 +163,10 @@ dbt build --profiles-dir .
 
 ### `ModuleNotFoundError` for pandas or numpy
 
-Reinstall the project dependencies:
+Reinstall the project dependencies from the project directory:
 
 ```bash
-pip install 'dbt-duckdb>=1.8,<1.9' pandas numpy
+python -m pip install -r requirements.txt
 ```
 
 ### Deprecation warnings during `dbt deps` or `dbt build`

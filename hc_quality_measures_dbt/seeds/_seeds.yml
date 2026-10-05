@@ -27,7 +27,7 @@ seeds:
       Used in ranking logic to select best available source for each measurement.
     columns:
       - name: source_system
-        description: Source system identifier (payer, ehr, patient_reported)
+        description: Source system identifier (payer, ehr, patient_reported, fhir)
         tests:
           - unique
           - not_null
@@ -36,6 +36,7 @@ seeds:
           Priority order (1 = highest trust, 4 = lower trust)
         tests:
           - not_null
+          - unique
           - accepted_values:
               values: [1, 2, 3, 4]
       - name: trust_level
@@ -58,6 +59,30 @@ seeds:
       - name: patient_id
         tests:
           - not_null
+          - relationships:
+              to: ref('seed_patients')
+              field: patient_id
+      - name: encounter_id
+        tests:
+          - not_null
+      - name: dx_code
+        tests:
+          - relationships:
+              to: ref('dx_codes')
+              field: dx_code
+      - name: vital_type
+        tests:
+          - accepted_values:
+              values: ['BP_SYSTOLIC', 'BP_DIASTOLIC']
+      - name: vital_value
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 300
+      - name: vital_unit
+        tests:
+          - accepted_values:
+              values: ['mmHg']
 
   - name: ehr_data
     description: EHR seed data used by the EHR staging models for diagnoses and vitals.
@@ -65,6 +90,30 @@ seeds:
       - name: patient_id
         tests:
           - not_null
+          - relationships:
+              to: ref('seed_patients')
+              field: patient_id
+      - name: encounter_id
+        tests:
+          - not_null
+      - name: dx_code
+        tests:
+          - relationships:
+              to: ref('dx_codes')
+              field: dx_code
+      - name: vital_type
+        tests:
+          - accepted_values:
+              values: ['BP_SYSTOLIC', 'BP_DIASTOLIC']
+      - name: vital_value
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 300
+      - name: vital_unit
+        tests:
+          - accepted_values:
+              values: ['mmHg']
 
   - name: patient_reported_data
     description: Patient-reported seed data used by the patient-reported staging models.
@@ -72,3 +121,19 @@ seeds:
       - name: patient_id
         tests:
           - not_null
+          - relationships:
+              to: ref('seed_patients')
+              field: patient_id
+      - name: vital_type
+        tests:
+          - accepted_values:
+              values: ['BP_SYSTOLIC', 'BP_DIASTOLIC']
+      - name: vital_value
+        tests:
+          - dbt_expectations.expect_column_values_to_be_between:
+              min_value: 0
+              max_value: 300
+      - name: vital_unit
+        tests:
+          - accepted_values:
+              values: ['mmHg']

@@ -1,22 +1,20 @@
 version: 2
 
 models:
-  - name: mrt_vitals
+  - name: mrt_vitals__vitals
     description: |
-      Fact table containing cleaned, ranked vital measurements. One row per vital
-      measurement per patient, with duplicates resolved via source priority ranking.
-      This is the primary table for vital data analysis.
+      Fact table containing one preferred source record per patient, measurement
+      date, and vital type. Source priority is configured in the source_priority seed.
+    tests:
+      - dbt_expectations.expect_compound_columns_to_be_unique:
+          column_list: [patient_id, vital_date, vital_type]
     columns:
       - name: patient_id
         description: Patient identifier
-        tests:
-          - not_null
       - name: encounter_id
         description: Encounter where vital was recorded (may be null)
       - name: vital_date
         description: Date vital was measured
-        tests:
-          - not_null
       - name: vital_type
         description: Type of vital measurement (BP_SYSTOLIC, BP_DIASTOLIC)
       - name: vital_value

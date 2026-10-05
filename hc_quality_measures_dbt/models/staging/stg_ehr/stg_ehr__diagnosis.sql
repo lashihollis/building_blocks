@@ -1,6 +1,7 @@
 select distinct
     patient_id,
     encounter_id,
-    dx_code
+    dx_code,
+    'ehr' as source_system
 from {{ ref('ehr_data') }}
 where dx_code is not null

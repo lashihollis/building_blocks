@@ -6,4 +6,5 @@ select
     vital_value,
     vital_unit,
     source_system
-from "quality_measures"."main"."int_vitals__ranked"
+from {{ ref('int_vitals__ranked') }}
+where source_rank = 1

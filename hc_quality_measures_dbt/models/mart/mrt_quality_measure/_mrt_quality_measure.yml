@@ -1,11 +1,24 @@
 version: 2
 
 models:
-  - name: mrt_quality_measure
+  - name: mrt_quality_measure__hypertension
     description: |
       Final quality measure table answering the business question: which hypertension
-      patients have had a blood pressure reading within the last year?
-      One row per hypertension patient with compliance flag.
+      patients have had a blood pressure measurement within the prior six calendar
+      months as of measure_as_of_date? One row per patient with a hypertension
+      diagnosis and a compliance flag.
+    tests:
+      - dbt_expectations.expression_is_true:
+          expression: >-
+            most_recent_bp_date is null
+            or most_recent_bp_date <= measure_as_of_date
+      - dbt_expectations.expression_is_true:
+          expression: >-
+            compliant = case
+              when most_recent_bp_date between measure_as_of_date - interval '6 months'
+                and measure_as_of_date then 1
+              else 0
+            end
     columns:
       - name: patient_id
         description: Patient identifier
@@ -14,9 +27,12 @@ models:
           - not_null
       - name: most_recent_bp_date
         description: Date of most recent blood pressure reading (null if no reading)
+      - name: measure_as_of_date
+        description: Date against which the six-calendar-month reporting window is evaluated
       - name: compliant
         description: |
-          Flag indicating if patient had BP reading within last 365 days.
+          Flag indicating if patient had a BP component recorded within the prior
+          six calendar months, inclusive of measure_as_of_date.
           1 = compliant, 0 = not compliant
         tests:
           - not_null

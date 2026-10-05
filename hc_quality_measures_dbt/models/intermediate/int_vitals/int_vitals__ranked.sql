@@ -1,23 +1,27 @@
-with unioned as (
-
-select * 
-from "quality_measures"."main"."int_vitals__unioned"
-
-),
-
-ranked as (
+with ranked as (
     select
-        *,
+        vitals.patient_id,
+        vitals.encounter_id,
+        vitals.vital_date,
+        vitals.vital_type,
+        vitals.vital_value,
+        vitals.vital_unit,
+        vitals.source_system,
+        source_priority.priority_rank as source_priority_rank,
         row_number() over (
-            partition by patient_id, vital_date, vital_type
+            partition by
+                vitals.patient_id,
+                vitals.vital_date,
+                vitals.vital_type
             order by
-                case source_system
-                    when 'payer' then 1
-                    when 'ehr' then 2
-                    when 'patient_reported' then 3
-                end
-        ) as rank
-    from unioned
+                source_priority.priority_rank,
+                vitals.encounter_id nulls last,
+                vitals.vital_value,
+                vitals.vital_unit
+        ) as source_rank
+    from {{ ref('int_vitals__unioned') }} as vitals
+    left join {{ ref('source_priority') }} as source_priority
+        on vitals.source_system = source_priority.source_system
 )
 
 select *

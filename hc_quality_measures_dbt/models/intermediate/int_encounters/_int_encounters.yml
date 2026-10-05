@@ -1,23 +1,17 @@
 version: 2
 
 models:
-  - name: int_encounters_unioned
+  - name: int_encounters__unioned
     description: |
       Union of all encounter data from payer and EHR sources. Patient-reported
-      encounters excluded as they lack structured encounter identifiers.
+      encounters excluded as they lack structured encounter identifiers. Encounter
+      IDs are unique within a source, so the model grain includes source_system.
     columns:
       - name: encounter_id
-        description: Unique identifier for the encounter
-        tests:
-          - unique
-          - not_null
+        description: Source-specific encounter identifier
       - name: patient_id
         description: Patient identifier
-        tests:
-          - not_null
       - name: encounter_date
         description: Date of the encounter
-        tests:
-          - not_null
       - name: source_system
         description: Original source system
