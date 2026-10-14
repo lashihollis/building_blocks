@@ -1,34 +1,68 @@
-# 🧱 Building Blocks
+# Building Blocks
 
-A collection of projects showcasing hands-on work across data analytics, data engineering, and software fundamentals — built while continuously learning and leveling up technical skills.
+A portfolio of hands-on projects and exercises in analytics engineering, data
+quality, Python, and SQL. Each folder is a separate project or area of practice;
+there is no single environment or application to install for the whole repository.
 
-## 📂 Contents
+## Projects
 
-| Folder | What's inside |
+| Project | What it does |
 |---|---|
-| [`case_studies`](./case_studies) | End-to-end breakdowns of technical projects — problem framing, design decisions, and outcomes |
-| [`data_science_projects`](./data_science_projects) | Data science and analysis work, including exploratory notebooks and modeling |
-| [`hc_quality_measures_dbt`](./hc_quality_measures_dbt) | Healthcare quality measures implemented with dbt — data modeling and transformation pipelines |
-| [`python_practice`](./python_practice) | Python exercises covering data processing, automation, and scripting fundamentals |
-| [`sql_practice`](./sql_practice) | SQL exercises in data modeling, transformations, and analytical querying |
-| [`.github/workflows`](./.github/workflows) | CI automation for the repo |
+| [`hc_quality_measures_dbt/`](./hc_quality_measures_dbt/) | A dbt and DuckDB workflow that generates mock patient data, combines payer, EHR, and patient-reported vitals, applies configured source precedence, and produces a hypertension quality-measure mart. |
+| [`data_quality_checker_py/`](./data_quality_checker_py/) | A Python data-quality framework demonstrating reusable checks, structured failure results, and a Matplotlib visualization on simulated claims data. |
+| [`finance_ingestion_pipeline/`](./finance_ingestion_pipeline/) | A learning project for selecting files to process, skip, or investigate using status metadata, checksums, and heartbeat age. Includes pytest coverage; it does not ingest transaction rows or run a production pipeline. |
+| [`python_practice/`](./python_practice/) | Standalone Python exercises, small scripts, notebooks, and data-analysis projects, including census-data cleaning and exploratory analysis. |
+| [`sql_practice/`](./sql_practice/) | Standalone SQL exercises for querying, analysis, and database setup. |
+| [`case_studies/`](./case_studies/) | Written project narratives covering healthcare quality-measure modeling and gaps-in-care work. |
 
-## 🎯 Purpose
+## Getting started
 
-This repo exists to demonstrate technical proficiency and problem-solving across data-focused disciplines — from raw SQL and Python fundamentals to applied data science and production-style dbt pipelines.
+Choose a project folder and follow its README for project-specific setup. For
+example, to build the healthcare quality-measure project:
 
-## 🛠️ Tech Stack
+```bash
+cd hc_quality_measures_dbt
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+dbt deps
+python generate_data.py
+dbt build --profiles-dir .
+```
 
-- **Python** — scripting, automation, data processing
-- **SQL** — querying, modeling, transformations
-- **dbt** — analytics engineering / data transformation pipelines
-- **Jupyter Notebooks** — exploratory data analysis
-- **GitHub Actions** — CI/CD workflows
+The dbt build loads the project seeds, builds the staging, intermediate, and mart
+models, and runs the configured source, seed, and selected mart tests. The result
+is written to `hc_quality_measures_dbt/quality_measures.duckdb`. See the
+[healthcare project README](./hc_quality_measures_dbt/README.md) for details.
 
-## 🚧 Status
+The financial file-tracker tests can be run separately:
 
-Actively maintained — new projects and deeper dives into data engineering concepts are added on an ongoing basis.
+```bash
+cd finance_ingestion_pipeline
+python -m pip install pytest
+python -m pytest -v
+```
 
-## 📫 Contact
+## Automation
 
-Feel free to explore the folders above or reach out with questions about any of the projects.
+GitHub Actions workflows in [`.github/workflows/`](./.github/workflows/) can
+refresh the generated healthcare data and then run the dbt build. These
+workflows support scheduled and manual runs; they are specific to that project
+and do not provide repository-wide CI for every exercise.
+
+## Technologies and topics
+
+- **Python** for scripts, data generation, reusable validation logic, and
+  notebooks
+- **SQL and dbt** for transformations, model lineage, and data-quality checks
+- **DuckDB** for local analytical storage
+- **Jupyter** for exploratory data analysis
+- **pytest and GitHub Actions** for project-level automated tests and workflow
+  automation
+
+## Repository status
+
+This is an evolving learning portfolio. Projects vary in maturity and scope:
+some are executable code with tests, while others are exercises or written
+case studies. Refer to each project’s documentation for its current
+dependencies, setup steps, and limitations.
